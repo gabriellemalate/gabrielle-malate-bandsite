@@ -1,0 +1,17 @@
+@mixin font {
+    @font-face {
+        font-family: "avenir-next-regular";
+        src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format ("opentype");
+    }
+    font-family: avenir-next-regular, monospace, serif; //backup fonts
+
+    @font-face {
+        font-family: "avenir-next-bold";
+        src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format ("opentype");
+    }
+
+    @font-face {
+        font-family: "avenir-next-demi";
+        src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf) format ("opentype");
+    }
+}

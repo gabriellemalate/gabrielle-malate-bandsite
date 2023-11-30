@@ -1,0 +1,307 @@
+@use "./mixins" as *;
+@use "./typography" as *;
+@use "../partials/variables" as *;
+
+/* General */
+body {
+    font-family: Avenir, monospace;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style-type: none;
+}
+header {
+    margin: 0;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    background-color: $bandsite__black;
+    margin: 0;
+
+    &__eq {
+        @include column;
+        padding-top: .8rem;
+        width: 100%;
+
+        @include tablet {
+            @include row;
+            height: 7vw;
+            max-height: 5.8vh;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 1.4rem;
+            max-width: 58vh;
+        }
+    }
+
+    &__items {
+        @include row;
+        width: 100%;
+        justify-content:space-between;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding-top: .4rem;
+        font-size: .875rem;
+
+        &--left {
+            padding: 0;
+            @include current-page--mobile;
+            color: $white;
+            transition: .8s;
+
+            &:hover {
+                font-weight: lighter;
+                color: $mercury;
+            }
+
+            &:active{
+                color: $white;
+            }
+        
+            @include tablet {
+                @include current-page--tablet;
+            }
+        }
+
+        &--right {
+            width: 50%;
+            transition: .5s;
+            color: $mercury;
+            @include current-page--mobile;
+            border-color: $bandsite__black;
+
+            &:hover {
+                @include current-page--mobile;
+                font-weight: lighter;
+
+                @include tablet {
+                    @include current-page--tablet;
+                    border: 0;
+                }
+            }
+
+            &:active {
+                @include current-page--mobile;
+                color: $white;
+
+                @include tablet {
+                    @include current-page--tablet;
+                    border: 0;
+                }
+            }
+        
+            @include tablet {
+                padding-bottom: .6rem;
+            }
+        }
+    
+        @include tablet {
+            width: 50%;
+            padding-left: 3.2rem;
+            max-width: 18vh;
+        }
+    }
+}
+.header-logo {
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+    color: $mercury;
+
+    &:hover {
+        transform: scale(1.2);
+        color: $white;
+    }
+
+    @include tablet {
+        padding-left: 2rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: $bandsite__black;
+    color: $white;
+    padding-left: 6%;
+
+    & h2 {
+        @include mobile-header;
+        padding: 0;
+        padding-top: 1.4rem;
+        padding-bottom: .2rem;
+    
+        @include tablet {
+            padding-top: 1rem;
+            @include section-header--tablet;
+            padding-left: 0;
+            font-size: 2.2rem;
+        }
+    }
+
+    & p, & a {
+        @include mobile-par;
+
+        @include tablet {
+            font-size: .813rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    & h4 {
+        @include mobile-sub;
+
+        &:nth-child(even) {
+            margin-bottom: 1rem;
+            margin-top: 0;
+
+            @include tablet {
+                margin-bottom: 1.4rem;
+            }
+        }
+
+        &:nth-child(odd) {
+            margin-top: 1.2rem;
+            margin-bottom: 0;
+
+            @include tablet {
+                margin-top: .8rem;
+            }
+        }
+
+        @include tablet {
+            font-size: .875rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    & p:nth-child(even) {
+        margin-bottom: .8rem;
+        margin-top: 0;
+        
+        @include tablet {
+            padding-bottom: .6rem;
+        }
+    }
+
+    & p:nth-child(odd) {
+        margin-bottom: 0;
+    }
+
+    @include tablet{
+        padding-left: 0;
+        @include column;
+    }
+}
+
+#footer__logo--mobile {
+    margin-top: 4rem;
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-bottom: .2rem;
+
+    @include tablet {
+        display: none;
+    }
+}
+#footer__logo--tablet {
+    display: none;
+    font-size: 1.5em;
+    font-weight: lighter;
+
+    @include tablet {
+        display: block;
+        padding-top: 1.2rem;
+    }
+}
+#footer__top--tablet {
+    @include tablet {
+        @include row;
+        justify-content: space-between;
+        padding-top: 1rem;
+        width: 90%;
+        max-width: 112vh;
+    }
+}
+.social {
+    @include tablet {
+        @include row;
+        width: 8rem;
+        justify-content: flex-start;
+    }
+
+    &__row {
+        margin: 1rem 0;
+        margin-bottom: 0;
+
+        @include tablet {
+            margin: 0;
+            padding-top: 1.2rem;
+            @include row;
+            justify-content: space-between;
+            width: 7.4rem;
+            max-width: 11rem;
+            margin-left: 6%;
+        }
+    }
+
+        & img {
+            transition: .4s;
+            margin-right: 1.6rem;
+
+            &:hover {
+                transform: scale(1.2)
+            }
+
+            @include tablet {
+                margin-right: 0;
+            }
+        }
+
+    @include tablet {
+        width: 60%;       
+    }
+}
+
+.contact {
+
+    &__person {
+        @include tablet {
+            margin-right: 3.6rem;
+        }
+
+        @include desktop {
+            margin-right: 6%;
+        }
+    }
+
+    @include tablet {
+        @include row;
+        justify-content: flex-start;
+        width: 90%;
+        max-width: 64rem;
+    }
+
+    & a {
+        padding-bottom: .2rem;
+    }
+}
+.copyright {
+    font-size: .625rem;
+    line-height: 1.25rem;
+    padding-bottom: 1rem;
+
+    @include tablet {
+        margin-top: 3rem;
+        font-size: .875rem;
+        padding-bottom: 2.2rem;
+        width: 90%;
+        max-width: 64rem;
+    }
+}

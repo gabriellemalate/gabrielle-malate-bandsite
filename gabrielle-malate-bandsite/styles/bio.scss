@@ -104,30 +104,35 @@ h1 {
         }
     }
 
-    & h3 {
-        @include mobile-sub;
-        margin-top: 1.4rem;
-        align-self: flex-start;
-        padding-left: 2%;
-
-        @include tablet {
-            font-size: 1.52rem;
-            font-weight: 600;
-            margin: 2.6rem 0rem 0rem 5.4rem;
-            padding-left: 0;
-        }
-
-        @include desktop {
-            margin-left: 15.4rem;
-            font-size: 1.4rem;
-            margin-bottom: 0.4rem;
-        }
-    }
-
     &__main-text {
         @include column;
         padding-bottom: 1rem;
         width: 100%;
+
+        @include desktop {
+            align-items: center;
+            width: 66%;
+        }
+
+        & h3 {
+            @include mobile-sub;
+            margin-top: 1.4rem;
+            align-self: flex-start;
+            padding-left: 2%;
+    
+            @include tablet {
+                font-size: 1.52rem;
+                font-weight: 600;
+                margin: 2.6rem 0rem 0rem 5.4rem;
+                padding-left: 0;
+            }
+    
+            @include desktop {
+                font-size: 1.4rem;
+                margin-left: 0;
+                margin-bottom: 0.4rem;
+            }
+        }
 
         &--paragraphs {
             @include mobile-par;
@@ -138,6 +143,10 @@ h1 {
                 @include row;
                 justify-content: center;
                 margin-bottom: 1rem;
+            }
+
+            @include desktop {
+                justify-content: space-between;
             }
 
             & p {
@@ -154,7 +163,9 @@ h1 {
                 }
 
                 @include desktop {
-                    width: 32%;
+                    width: 49%;
+                    margin-right: 0;
+                    max-width: 45vh;
                     line-height: 1.25rem;
                 }
             }

@@ -40,7 +40,8 @@ header {
     justify-content: center;
     align-items: flex-start;
     padding-top: 1.4rem;
-    max-width: 58vh;
+    max-width: 48vh;
+    border: red 1px solid;
   }
 }
 .nav-bar__logo {
@@ -62,7 +63,7 @@ header {
 }
 @media (min-width: 768px) {
   .nav-bar__logo {
-    padding-left: 2rem;
+    font-size: 1.5rem;
   }
 }
 .nav-bar__items {
@@ -73,9 +74,10 @@ header {
   margin: 0;
   padding: 0;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 0.4rem;
   font-size: 1.5rem;
   width: 100%;
+  border: blue 1px solid;
 }
 .nav-bar__items--left {
   padding: 0;
@@ -151,8 +153,9 @@ header {
 @media (min-width: 768px) {
   .nav-bar__items {
     width: 50%;
-    padding-left: 3.2rem;
-    max-width: 18vh;
+    max-width: 26vh;
+    font-size: 0.875rem;
+    padding-left: 2.4rem;
   }
 }
 
@@ -175,10 +178,9 @@ footer h2 {
 @media (min-width: 768px) {
   footer h2 {
     padding-top: 1rem;
-    font-size: 2.25rem;
+    font-size: 2.75rem;
     line-height: 2rem;
     font-weight: 700;
-    padding-left: 2.4rem;
     padding-left: 0;
     font-size: 2.2rem;
   }
@@ -455,9 +457,9 @@ footer p:nth-child(odd) {
 }
 .about__heading {
   border: 1px blue solid;
-  width: 100%;
+  width: 90%;
 }
-.about__heading--musicians {
+max-width .about__heading--musicians {
   font-size: 2.5rem;
   line-height: 2.4rem;
   font-weight: 600;
@@ -469,18 +471,17 @@ footer p:nth-child(odd) {
   align-self: flex-start;
 }
 @media (min-width: 768px) {
-  .about__heading--musicians {
-    font-size: 2.25rem;
+  max-width .about__heading--musicians {
+    font-size: 2.75rem;
     line-height: 2rem;
     font-weight: 700;
-    padding-left: 2.4rem;
     margin-top: 3.6rem;
     margin-bottom: 1.8rem;
     font-weight: 600;
   }
 }
 @media (min-width: 1280px) {
-  .about__heading--musicians {
+  max-width .about__heading--musicians {
     margin-left: 7rem;
     margin-top: 4rem;
   }
@@ -640,10 +641,9 @@ footer p:nth-child(odd) {
 }
 @media (min-width: 768px) {
   .gallery h2 {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
     line-height: 2rem;
     font-weight: 700;
-    padding-left: 2.4rem;
     margin-bottom: 2.2rem;
     padding-top: 2.6rem;
     padding-left: 0;

@@ -78,7 +78,8 @@
 
     &__heading {
         border: 1px blue solid;
-        width: 100%;
+        width: 90%;
+        max-width
         
         &--musicians {
         @include mobile-header;

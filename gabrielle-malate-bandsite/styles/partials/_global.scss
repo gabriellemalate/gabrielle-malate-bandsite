@@ -36,7 +36,8 @@ header {
             justify-content: center;
             align-items: flex-start;
             padding-top: 1.4rem;
-            max-width: 58vh;
+            max-width: 48vh;
+            border: red 1px solid;;
         }
     }
 
@@ -55,7 +56,7 @@ header {
         }
     
         @include tablet {
-            padding-left: 2rem;
+            font-size: 1.5rem;
         }
     }
 
@@ -65,9 +66,10 @@ header {
         margin: 0;
         padding: 0;
         text-align: center;
-        padding-top: 1rem;
+        padding-top: .4rem;
         font-size: 1.5rem;
         width: 100%;
+        border: blue 1px solid;
 
         &--left {
             padding: 0;
@@ -123,8 +125,9 @@ header {
 
         @include tablet {
             width: 50%;
-            padding-left: 3.2rem;
-            max-width: 18vh;
+            max-width: 26vh;
+            font-size: .875rem;
+            padding-left: 2.4rem;
         }
     }
 }

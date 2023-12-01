@@ -48,8 +48,8 @@
 }
 
 @mixin mobile-header {
-    font-size: 2.5rem;
-    line-height: 2.4rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 600;
     letter-spacing: 0.04rem;
     margin: 0;
@@ -67,7 +67,7 @@
 }
 
 @mixin section-header--tablet {
-    font-size: 2.75rem;
-    line-height: 2rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
 }

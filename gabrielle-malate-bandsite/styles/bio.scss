@@ -79,8 +79,12 @@
     &__heading {
         border: 1px blue solid;
         width: 90%;
-        max-width
-        
+
+        @include tablet {
+            max-width: 108vh;
+            height: 100%;
+        }
+
         &--musicians {
         @include mobile-header;
         border: 1px pink solid;
@@ -104,10 +108,11 @@
             width: 90%;
             height: 48vw;
             object-fit: cover;
+            max-width: 113vh;
     
             @include tablet {
-                width: 76%;
-                height: 40.4vw;
+                width: 84%;
+                height: 40.2vw;
             }
     
             @include desktop {
@@ -190,6 +195,10 @@
 }
 #about__photo-and-quote--saying {
     margin-top: 0.8rem;
+    @include mobile-sub;
+    font-weight: 500;
+    width: 90%;
+    max-width: 124vh;
     
     @include tablet {
         width: 76%;

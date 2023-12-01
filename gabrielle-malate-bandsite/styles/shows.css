@@ -72,8 +72,8 @@ header {
   padding: 0;
   transition: 0.3s;
   color: #E1E1E1;
-  font-size: 2.5rem;
-  line-height: 2.4rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
   letter-spacing: 0.04rem;
   margin: 0;
@@ -187,8 +187,8 @@ footer {
   padding-left: 6%;
 }
 footer h2 {
-  font-size: 2.5rem;
-  line-height: 2.4rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
   letter-spacing: 0.04rem;
   margin: 0;
@@ -199,8 +199,8 @@ footer h2 {
 @media (min-width: 768px) {
   footer h2 {
     padding-top: 1rem;
-    font-size: 2.75rem;
-    line-height: 2rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
     padding-left: 0;
     font-size: 2.2rem;

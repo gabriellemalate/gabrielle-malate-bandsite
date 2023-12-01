@@ -155,6 +155,25 @@ header {
     @include column;
     align-items: start;
     width: 90%;
+
+        @include tablet {
+            width: 90%;
+        }
+    }
+
+    &__top--tablet {
+        @include tablet {
+            @include row;
+            justify-content: space-between;
+            padding-top: 1rem;
+            width: 100%;
+            max-width: 112vh;
+            border: 1px red solid;
+        }
+        @include desktop {
+            width: 90%;
+            max-width: 200vh;
+        }
     }
 
     & h2 {
@@ -168,16 +187,6 @@ header {
             @include section-header--tablet;
             padding-left: 0;
             font-size: 2.2rem;
-        }
-    }
-
-    & p,
-    & a {
-        @include mobile-par;
-
-        @include tablet {
-            font-size: 0.813rem;
-            line-height: 1.25rem;
         }
     }
 
@@ -208,36 +217,29 @@ header {
         }
     }
 
-    & p:nth-child(even) {
-        margin-bottom: 0.8rem;
-        margin-top: 0;
+    & p {
+        @include mobile-par;
 
         @include tablet {
-            padding-bottom: 0.6rem;
+            font-size: 0.813rem;
+            line-height: 1.25rem;
         }
-    }
+    
+        &:nth-child(even) {
+            margin-bottom: 0.8rem;
+            margin-top: 0;
+            
+            @include tablet {
+                padding-bottom: 0.6rem;
+            }
+        }
 
-    & p:nth-child(odd) {
-        margin-bottom: 0;
-    }
+        &:nth-child(odd) {
+            margin-bottom: 0;
 
-    @include tablet {
-        padding-left: 0;
-        @include column;
-    }
-
-    &__top--tablet {
         @include tablet {
-            @include row;
-            justify-content: space-between;
-            padding-top: 1rem;
-            width: 90%;
-            max-width: 112vh;
-            border: 1px red solid;
-        }
-        @include desktop {
-            width: 90%;
-            max-width: 200vh;
+            padding-left: 0;
+        }   
         }
     }
 
@@ -284,11 +286,11 @@ header {
     &__contact {
         &--person {
             @include tablet {
-                margin-right: 3.6rem;
+                width: 100%;
             }
     
             @include desktop {
-                margin-right: 6%;
+                width: 100%;
             }
         }
     
@@ -318,7 +320,7 @@ header {
         }
         &--tablet {
             display: none;
-            font-size: 1.5em;
+            font-size: 1.5rem;
             font-weight: lighter;
         
             @include tablet {
@@ -342,4 +344,3 @@ header {
         }
     }
 }
-

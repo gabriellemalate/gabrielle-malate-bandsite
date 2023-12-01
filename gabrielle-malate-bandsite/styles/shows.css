@@ -195,6 +195,29 @@ header {
   align-items: start;
   width: 90%;
 }
+@media (min-width: 768px) {
+  .footer__eq {
+    width: 90%;
+  }
+}
+@media (min-width: 768px) {
+  .footer__top--tablet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    width: 100%;
+    max-width: 112vh;
+    border: 1px red solid;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__top--tablet {
+    width: 90%;
+    max-width: 200vh;
+  }
+}
 .footer h2 {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -213,17 +236,6 @@ header {
     font-weight: 700;
     padding-left: 0;
     font-size: 2.2rem;
-  }
-}
-.footer p, .footer a {
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-}
-@media (min-width: 768px) {
-  .footer p, .footer a {
-    font-size: 0.813rem;
-    line-height: 1.25rem;
   }
 }
 .footer h4 {
@@ -255,6 +267,17 @@ header {
     line-height: 1.25rem;
   }
 }
+.footer p {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .footer p {
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+  }
+}
 .footer p:nth-child(even) {
   margin-bottom: 0.8rem;
   margin-top: 0;
@@ -268,29 +291,8 @@ header {
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
-  .footer {
+  .footer p:nth-child(odd) {
     padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media (min-width: 768px) {
-  .footer__top--tablet {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1rem;
-    width: 90%;
-    max-width: 112vh;
-    border: 1px red solid;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__top--tablet {
-    width: 90%;
-    max-width: 200vh;
   }
 }
 @media (min-width: 768px) {
@@ -338,12 +340,12 @@ header {
 }
 @media (min-width: 768px) {
   .footer__contact--person {
-    margin-right: 3.6rem;
+    width: 100%;
   }
 }
 @media (min-width: 1280px) {
   .footer__contact--person {
-    margin-right: 6%;
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
@@ -372,7 +374,7 @@ header {
 }
 .footer__logo--tablet {
   display: none;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: lighter;
 }
 @media (min-width: 768px) {

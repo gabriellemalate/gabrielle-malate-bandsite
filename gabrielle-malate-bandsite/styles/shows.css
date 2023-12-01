@@ -28,6 +28,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 7.68vh;
   }
 }
 @media (min-width: 768px) {
@@ -120,7 +121,7 @@ header {
     border: 0;
     -webkit-text-decoration: underline 0.188rem;
             text-decoration: underline 0.188rem;
-    text-underline-offset: 1.8rem;
+    text-underline-offset: 1.62rem;
   }
 }
 .nav-bar__items--right {
@@ -145,7 +146,7 @@ header {
     border: 0;
     -webkit-text-decoration: underline 0.188rem;
             text-decoration: underline 0.188rem;
-    text-underline-offset: 1.8rem;
+    text-underline-offset: 1.62rem;
     border: 0;
   }
 }
@@ -161,7 +162,7 @@ header {
     border: 0;
     -webkit-text-decoration: underline 0.188rem;
             text-decoration: underline 0.188rem;
-    text-underline-offset: 1.8rem;
+    text-underline-offset: 1.62rem;
     border: 0;
   }
 }
@@ -349,7 +350,7 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 96%;
-    max-width: 77.4vh;
+    max-width: 77vh;
   }
 }
 @media (min-width: 1280px) {

@@ -32,13 +32,13 @@
 @mixin current-page--tablet {
     border: 0;
     text-decoration: underline 0.188rem;
-    text-underline-offset: 1.8rem;
+    text-underline-offset: 1.62rem;
 }
 @mixin hero {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 60vw;
+    height: 58vw;
 }
 
 @mixin hero-overlay {

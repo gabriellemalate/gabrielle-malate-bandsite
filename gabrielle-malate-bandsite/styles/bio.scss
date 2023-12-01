@@ -39,7 +39,7 @@
     }
 
     @include tablet {
-        height: 58.6vw;
+        height: 58.4vw;
     }
 
     @include desktop {
@@ -234,48 +234,45 @@
 /* Gallery */
 .gallery {
     background-color: $alabaster;
+    @include column;
 
-    & h2 {
-        @include mobile-header;
-        padding-top: 1.2rem;
-        margin-bottom: 0.8rem;
-
-        @include tablet {
-            @include section-header--tablet;
-            margin-bottom: 2.2rem;
-            padding-top: 2.6rem;
-            padding-left: 0;
-        }
-    }
-
-    &__equalizer {
+    &__eq {
         @include column;
 
         @include tablet {
             @include column;
-        }
-    }
-
-    &__heading {
-        width: 100%;
-        max-width: 78vh;
-
-        @include tablet {
-            width: 88%;
+            align-items: flex-start;
+            width: 90%;
             max-width: 110vh;
-            min-height: 8vw;
         }
-    }
 
+        @include desktop{
+            width: 79%;
+            max-width: 600vh;
+        }
+
+            & h2 {
+                @include mobile-header;
+                padding-top: 1.2rem;
+                margin-bottom: 0.8rem;
+        
+                @include tablet {
+                    @include section-header--tablet;
+                    margin-bottom: 2.2rem;
+                    padding-top: 2.6rem;
+                    padding-left: 0;
+                }
+            }
+    }
+    
     &__images {
         @include column;
 
         @include tablet {
             @include row;
             flex-wrap: wrap;
-            justify-content: center;
-            margin: 0.4rem 1rem;
-            max-width: 134vh;
+            justify-content: space-between;
+            width: 100%;
         }
     }
 
@@ -284,10 +281,11 @@
         margin-bottom: 1rem;
 
         @include tablet {
-            width: 26%;
-            height: auto;
-            margin: 0rem 0.68rem 2rem 0.68rem;
-            max-width: 36vh;
+            width: 31.6%;
+            height: 40%;
+            margin-bottom: 1.6rem;
+        }
+        @include desktop {
         }
     }
 

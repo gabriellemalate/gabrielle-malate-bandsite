@@ -25,7 +25,8 @@ header {
 
     @include tablet {
         @include row;
-        justify-content: center
+        justify-content: center;
+        height: 7.68vh;
     }
     &__smooth {
         @include tablet {
@@ -292,7 +293,7 @@ header {
             @include row;
             justify-content: space-between;
             width: 96%;
-            max-width: 77.4vh;
+            max-width: 77vh;
         }
 
         @include desktop {

@@ -65,14 +65,6 @@
     &__photo-and-quote {
         @include column;
         justify-content: center;
-
-        & p {
-            font-size: 0.875rem;
-            line-height: 1.313rem;
-            font-weight: 500;
-            margin-top: 0.4rem;
-            width: 88%;
-        }
     }
 
     &__heading {
@@ -106,7 +98,7 @@
         }
     }
         & img {
-            width: 90%;
+            width: 100%;
             height: 48vw;
             object-fit: cover;
             max-width: 113vh;
@@ -127,7 +119,7 @@
     &__main-text {
         @include column;
         padding-bottom: 1rem;
-        width: 100%;
+        width: 88%;
 
         @include desktop {
             align-items: center;
@@ -137,9 +129,9 @@
 
         & h3 {
             @include mobile-sub;
-            margin-top: 1.4rem;
+            margin-top: 1rem;
             align-self: flex-start;
-            padding-left: 2%;
+            font-weight: 500;
     
             @include tablet {
                 font-size: 1.52rem;
@@ -172,7 +164,6 @@
 
             & p {
                 margin-top: 1rem;
-                width: 86%;
 
                 @include tablet {
                     width: 36%;
@@ -196,8 +187,7 @@
 #about__photo-and-quote--saying {
     margin-top: 0.8rem;
     @include mobile-sub;
-    font-weight: 500;
-    width: 85%;
+    width: 88%;
     max-width: 124vh;
     
     @include tablet {
@@ -220,11 +210,14 @@
 }
 
 #about__photo-and-quote--author {
+    @include mobile-sub;
+    width: 88%;
+    margin-top: 0;
+
     @include tablet {
         font-weight: 600;
         width: 76%;
         font-size: .976rem;
-        margin-top: 0;
     }
 
     @include desktop {

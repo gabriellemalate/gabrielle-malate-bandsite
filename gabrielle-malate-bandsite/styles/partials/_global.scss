@@ -40,9 +40,8 @@ header {
     }
     &__eq {
         @include column;
-        padding-top: 0.8rem;
         width: 100%;
-        padding-top: 1.5rem;
+        padding-top: .8rem;
 
         @include tablet {
             @include row;
@@ -81,7 +80,7 @@ header {
         padding: 0;
         text-align: center;
         padding-top: .4rem;
-        font-size: 1.5rem;
+        font-size: .875rem;
         width: 100%;
 
         &--left {

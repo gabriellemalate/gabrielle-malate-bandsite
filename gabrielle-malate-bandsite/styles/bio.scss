@@ -112,6 +112,7 @@ h1 {
         @include desktop {
             align-items: center;
             width: 66%;
+            max-width: 100vh;
         }
 
         & h3 {

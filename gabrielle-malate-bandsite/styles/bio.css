@@ -500,6 +500,7 @@ h1 {
   .about__main-text {
     align-items: center;
     width: 66%;
+    max-width: 100vh;
   }
 }
 .about__main-text h3 {

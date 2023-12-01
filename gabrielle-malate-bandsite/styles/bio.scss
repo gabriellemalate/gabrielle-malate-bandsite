@@ -51,7 +51,6 @@
 .about {
     color: $bandsite__black;
     @include column;
-    border: 1px red solid;
 
     &__top-eq {
         @include column;
@@ -81,7 +80,7 @@
         width: 90%;
 
         @include tablet {
-            max-width: 108vh;
+            max-width: 110vh;
             height: 100%;
         }
 
@@ -100,7 +99,6 @@
         }
 
         @include desktop {
-            margin-left: 7rem;
             margin-top: 4rem;
         }
     }
@@ -116,7 +114,6 @@
             }
     
             @include desktop {
-                width: 66%;
                 margin-top: 0.8rem;
                 height: 35vw;
             }

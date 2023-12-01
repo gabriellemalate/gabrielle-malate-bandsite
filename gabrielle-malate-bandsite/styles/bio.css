@@ -449,7 +449,6 @@ footer p:nth-child(odd) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px red solid;
 }
 .about__top-eq {
   display: flex;
@@ -482,7 +481,7 @@ footer p:nth-child(odd) {
 }
 @media (min-width: 768px) {
   .about__heading {
-    max-width: 108vh;
+    max-width: 110vh;
     height: 100%;
   }
 }
@@ -509,7 +508,6 @@ footer p:nth-child(odd) {
 }
 @media (min-width: 1280px) {
   .about__heading--musicians {
-    margin-left: 7rem;
     margin-top: 4rem;
   }
 }
@@ -528,7 +526,6 @@ footer p:nth-child(odd) {
 }
 @media (min-width: 1280px) {
   .about__heading img {
-    width: 66%;
     margin-top: 0.8rem;
     height: 35vw;
   }

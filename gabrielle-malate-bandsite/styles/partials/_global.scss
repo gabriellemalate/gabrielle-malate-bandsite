@@ -42,7 +42,7 @@ header {
     &__eq {
         @include column;
         width: 100%;
-        padding-top: .8rem;
+        padding-top: 0.8rem;
 
         @include tablet {
             @include row;
@@ -63,12 +63,12 @@ header {
         color: $mercury;
         @include mobile-header;
         font-weight: lighter;
-    
+
         &:hover {
             transform: scale(1.2);
             color: $white;
         }
-    
+
         @include tablet {
             font-size: 1.5rem;
         }
@@ -80,8 +80,8 @@ header {
         margin: 0;
         padding: 0;
         text-align: center;
-        padding-top: .4rem;
-        font-size: .875rem;
+        padding-top: 0.4rem;
+        font-size: 0.875rem;
         width: 100%;
 
         &--left {
@@ -139,7 +139,7 @@ header {
         @include tablet {
             width: 60%;
             max-width: 28vh;
-            font-size: .875rem;
+            font-size: 0.875rem;
             padding-left: 2rem;
         }
     }
@@ -153,9 +153,9 @@ header {
     align-items: center;
 
     &__eq {
-    @include column;
-    align-items: start;
-    width: 90%;
+        @include column;
+        align-items: start;
+        width: 90%;
 
         @include tablet {
             width: 90%;
@@ -223,11 +223,11 @@ header {
             font-size: 0.875rem;
             line-height: 1.25rem;
         }
-    
+
         &:nth-child(even) {
             margin-bottom: 0.8rem;
             margin-top: 0;
-            
+
             @include tablet {
                 padding-bottom: 0.6rem;
             }
@@ -236,9 +236,9 @@ header {
         &:nth-child(odd) {
             margin-bottom: 0;
 
-        @include tablet {
-            padding-left: 0;
-        }   
+            @include tablet {
+                padding-left: 0;
+            }
         }
     }
 
@@ -247,11 +247,11 @@ header {
             @include row;
             justify-content: flex-start;
         }
-    
+
         &--row {
             margin: 1rem 0;
             margin-bottom: 0;
-    
+
             @include tablet {
                 margin: 0;
                 padding-top: 1.2rem;
@@ -261,34 +261,34 @@ header {
                 margin-left: 6%;
             }
         }
-    
+
         & img {
             transition: 0.4s;
             margin-right: 1.6rem;
-    
+
             &:hover {
                 transform: scale(1.2);
             }
-    
+
             @include tablet {
                 margin-right: 0;
             }
         }
-    
+
         @include tablet {
             width: 60%;
         }
     }
 
     &__contact {
-            &--email {
-                font-size: .8rem;
+        &--email {
+            font-size: 0.8rem;
 
-                @include desktop {
-                    font-size: .9rem;
-                }
+            @include desktop {
+                font-size: 0.9rem;
             }
-    
+        }
+
         @include tablet {
             @include row;
             justify-content: space-between;
@@ -302,14 +302,13 @@ header {
         }
     }
 
-    &__logo{
-    
+    &__logo {
         &--mobile {
             margin-top: 4rem;
             font-size: 1.5em;
             font-weight: lighter;
             margin-bottom: 0.2rem;
-        
+
             @include tablet {
                 display: none;
             }
@@ -318,7 +317,7 @@ header {
             display: none;
             font-size: 1.5rem;
             font-weight: lighter;
-        
+
             @include tablet {
                 display: block;
                 padding-top: 1.2rem;
@@ -330,7 +329,7 @@ header {
         font-size: 0.625rem;
         line-height: 1.25rem;
         padding-bottom: 1rem;
-    
+
         @include tablet {
             margin-top: 3rem;
             font-size: 0.875rem;

@@ -620,7 +620,7 @@ header {
     font-size: 1.52rem;
     font-weight: 600;
     margin-top: 2.6rem;
-    margin-bottom: 1REM;
+    margin-bottom: 1rem;
   }
 }
 @media (min-width: 1280px) {
@@ -669,7 +669,6 @@ header {
   .about__main-text--paragraphs p {
     width: 49%;
     margin-right: 0;
-    border: 1px brown solid;
     line-height: 1.25rem;
     max-width: 80vh;
   }

@@ -22,14 +22,14 @@
                 margin: 0;
                 color: $white;
                 @include mobile-header;
-            
+
                 @include tablet {
                     font-size: 3.75rem;
                     line-height: 4.25rem;
                     margin-left: 1.4rem;
                     margin-top: 2rem;
                 }
-            
+
                 @include desktop {
                     margin-left: 8rem;
                     font-size: 3.8rem;
@@ -72,14 +72,14 @@
             @include mobile-sub;
             width: 88%;
             max-width: 124vh;
-            
+
             @include tablet {
                 width: 76%;
                 font-weight: 600;
                 font-size: 1.375rem;
                 line-height: 2rem;
                 margin-top: 2rem;
-                margin-bottom: .9rem;
+                margin-bottom: 0.9rem;
                 text-align: start;
             }
             @include desktop {
@@ -89,24 +89,24 @@
                 font-size: 1.4rem;
                 max-width: 138vh;
             }
-            }
+        }
         &--author {
-                @include mobile-sub;
-                width: 88%;
-                margin-top: 0;
-            
-                @include tablet {
-                    font-weight: 600;
-                    width: 76%;
-                    font-size: .976rem;
-                }
-            
-                @include desktop {
-                    font-size: 1rem;
-                    width: 66%;
-                }
+            @include mobile-sub;
+            width: 88%;
+            margin-top: 0;
+
+            @include tablet {
+                font-weight: 600;
+                width: 76%;
+                font-size: 0.976rem;
             }
-}
+
+            @include desktop {
+                font-size: 1rem;
+                width: 66%;
+            }
+        }
+    }
 
     &__heading {
         width: 90%;
@@ -122,41 +122,40 @@
         }
 
         &--musicians {
-        @include mobile-header;
-        margin-top: 1.2rem;
-        margin-bottom: 0.6rem;
-        align-self: flex-start;
+            @include mobile-header;
+            margin-top: 1.2rem;
+            margin-bottom: 0.6rem;
+            align-self: flex-start;
 
-        @include tablet {
-            @include section-header--tablet;
-            margin-top: 3.6rem;
-            margin-bottom: 1.8rem;
-            font-weight: 600;
-        }
+            @include tablet {
+                @include section-header--tablet;
+                margin-top: 3.6rem;
+                margin-bottom: 1.8rem;
+                font-weight: 600;
+            }
 
-        @include desktop {
-            margin-top: 4rem;
+            @include desktop {
+                margin-top: 4rem;
+            }
         }
-    }
 
         & img {
             width: 100%;
             height: 48vw;
             object-fit: cover;
             max-width: 113vh;
-    
+
             @include tablet {
                 width: 84%;
                 height: 40.2vw;
             }
-    
+
             @include desktop {
                 margin-top: 0.8rem;
                 height: 35vw;
             }
         }
     }
-
 
     &__main-text {
         @include column;
@@ -179,14 +178,14 @@
             margin-top: 1rem;
             align-self: flex-start;
             font-weight: 500;
-    
+
             @include tablet {
                 font-size: 1.52rem;
                 font-weight: 600;
                 margin-top: 2.6rem;
-                margin-bottom: 1REM;
+                margin-bottom: 1rem;
             }
-    
+
             @include desktop {
                 font-size: 1.4rem;
                 margin-left: 0;
@@ -202,7 +201,7 @@
             @include tablet {
                 @include row;
                 justify-content: space-between;
-                margin-bottom: .8rem;
+                margin-bottom: 0.8rem;
             }
 
             @include desktop {
@@ -214,16 +213,15 @@
 
                 @include tablet {
                     width: 48%;
-                    font-size: .875rem;
+                    font-size: 0.875rem;
                     line-height: 1.375rem;
-                    margin-bottom: .2rem;
+                    margin-bottom: 0.2rem;
                     max-width: 43vh;
                 }
 
                 @include desktop {
                     width: 49%;
                     margin-right: 0;
-                    border: 1px brown solid;
                     line-height: 1.25rem;
                     max-width: 80vh;
                 }
@@ -247,25 +245,25 @@
             max-width: 110vh;
         }
 
-        @include desktop{
+        @include desktop {
             width: 79%;
             max-width: 600vh;
         }
 
-            & h2 {
-                @include mobile-header;
-                padding-top: 1.2rem;
-                margin-bottom: 0.8rem;
-        
-                @include tablet {
-                    @include section-header--tablet;
-                    margin-bottom: 2.2rem;
-                    padding-top: 2.6rem;
-                    padding-left: 0;
-                }
+        & h2 {
+            @include mobile-header;
+            padding-top: 1.2rem;
+            margin-bottom: 0.8rem;
+
+            @include tablet {
+                @include section-header--tablet;
+                margin-bottom: 2.2rem;
+                padding-top: 2.6rem;
+                padding-left: 0;
             }
+        }
     }
-    
+
     &__images {
         @include column;
 

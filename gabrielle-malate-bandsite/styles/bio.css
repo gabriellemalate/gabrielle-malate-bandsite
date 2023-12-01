@@ -591,6 +591,7 @@ h1 {
     margin-top: 2.4rem;
     line-height: 2rem;
     font-size: 1.4rem;
+    max-width: 138vh;
   }
 }
 

@@ -160,10 +160,6 @@ header {
             width: 90%;
             max-width: 110vh;
         }
-
-        @include desktop {
-            border: green 1px solid;
-        }
     }
 
     &__top--tablet {
@@ -172,8 +168,6 @@ header {
             justify-content: space-between;
             padding-top: 1rem;
             width: 100%;
-            max-width: 112vh;
-            border: 1px red solid;
         }
         @include desktop {
             max-width: 200vh;
@@ -250,7 +244,6 @@ header {
     &__social {
         @include tablet {
             @include row;
-            width: 8rem;
             justify-content: flex-start;
         }
     
@@ -263,8 +256,7 @@ header {
                 padding-top: 1.2rem;
                 @include row;
                 justify-content: space-between;
-                width: 7.4rem;
-                max-width: 11rem;
+                width: 13.4vh;
                 margin-left: 6%;
             }
         }

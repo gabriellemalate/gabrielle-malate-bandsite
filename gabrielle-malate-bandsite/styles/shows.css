@@ -201,11 +201,6 @@ header {
     max-width: 110vh;
   }
 }
-@media (min-width: 1280px) {
-  .footer__eq {
-    border: green 1px solid;
-  }
-}
 @media (min-width: 768px) {
   .footer__top--tablet {
     display: flex;
@@ -214,8 +209,6 @@ header {
     justify-content: space-between;
     padding-top: 1rem;
     width: 100%;
-    max-width: 112vh;
-    border: 1px red solid;
   }
 }
 @media (min-width: 1280px) {
@@ -305,7 +298,6 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 8rem;
     justify-content: flex-start;
   }
 }
@@ -321,8 +313,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 7.4rem;
-    max-width: 11rem;
+    width: 13.4vh;
     margin-left: 6%;
   }
 }

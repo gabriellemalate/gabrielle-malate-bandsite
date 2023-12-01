@@ -22,6 +22,28 @@ header {
   background-color: #323232;
   margin: 0;
 }
+@media (min-width: 768px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .nav-bar__smooth {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 92%;
+    max-width: 112vh;
+  }
+}
+@media (min-width: 1280px) {
+  .nav-bar__smooth {
+    width: 80%;
+  }
+}
 .nav-bar__eq {
   display: flex;
   flex-direction: column;
@@ -37,11 +59,10 @@ header {
     align-items: center;
     height: 7vw;
     max-height: 5.8vh;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     padding-top: 1.4rem;
-    max-width: 48vh;
-    border: red 1px solid;
+    max-width: 40vh;
   }
 }
 .nav-bar__logo {
@@ -77,7 +98,6 @@ header {
   padding-top: 0.4rem;
   font-size: 1.5rem;
   width: 100%;
-  border: blue 1px solid;
 }
 .nav-bar__items--left {
   padding: 0;
@@ -152,10 +172,10 @@ header {
 }
 @media (min-width: 768px) {
   .nav-bar__items {
-    width: 50%;
-    max-width: 26vh;
+    width: 60%;
+    max-width: 28vh;
     font-size: 0.875rem;
-    padding-left: 2.4rem;
+    padding-left: 2rem;
   }
 }
 

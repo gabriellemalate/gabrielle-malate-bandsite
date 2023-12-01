@@ -59,6 +59,7 @@
         @include desktop {
             align-items: flex-start;
             width: 66%;
+            max-width: 113vh;
         }
     }
 
@@ -75,7 +76,7 @@
             @include tablet {
                 width: 76%;
                 font-weight: 600;
-                font-size: 1.5rem;
+                font-size: 1.375rem;
                 line-height: 2rem;
                 margin-top: 2rem;
                 margin-bottom: .9rem;
@@ -162,10 +163,15 @@
         padding-bottom: 1rem;
         width: 88%;
 
+        @include tablet {
+            width: 76%;
+            max-width: 91vh;
+        }
+
         @include desktop {
             align-items: center;
             width: 66%;
-            max-width: 100vh;
+            max-width: 113vh;
         }
 
         & h3 {
@@ -177,8 +183,8 @@
             @include tablet {
                 font-size: 1.52rem;
                 font-weight: 600;
-                margin: 2.6rem 0rem 0rem 5.4rem;
-                padding-left: 0;
+                margin-top: 2.6rem;
+                margin-bottom: 1REM;
             }
     
             @include desktop {
@@ -195,8 +201,8 @@
 
             @include tablet {
                 @include row;
-                justify-content: center;
-                margin-bottom: 1rem;
+                justify-content: space-between;
+                margin-bottom: .8rem;
             }
 
             @include desktop {
@@ -207,12 +213,11 @@
                 margin-top: 1rem;
 
                 @include tablet {
-                    width: 36%;
+                    width: 48%;
                     font-size: .875rem;
                     line-height: 1.375rem;
-                    margin-bottom: 1rem;
+                    margin-bottom: .2rem;
                     max-width: 43vh;
-                    margin-right: 2.2vh;
                 }
 
                 @include desktop {

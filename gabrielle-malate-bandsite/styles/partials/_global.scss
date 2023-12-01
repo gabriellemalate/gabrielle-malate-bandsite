@@ -34,7 +34,8 @@ header {
             max-width: 112vh;
         }
         @include desktop {
-            width: 80%;
+            width: 81vw;
+            max-width: 90%;
         }
     }
     &__eq {

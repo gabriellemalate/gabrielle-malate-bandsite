@@ -41,7 +41,8 @@ header {
 }
 @media (min-width: 1280px) {
   .nav-bar__smooth {
-    width: 80%;
+    width: 81vw;
+    max-width: 90%;
   }
 }
 .nav-bar__eq {

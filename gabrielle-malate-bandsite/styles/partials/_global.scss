@@ -27,6 +27,7 @@ header {
         @include column;
         padding-top: 0.8rem;
         width: 100%;
+        padding-top: 1.5rem;
 
         @include tablet {
             @include row;
@@ -39,14 +40,34 @@ header {
         }
     }
 
+    &__logo {
+        font-weight: lighter;
+        margin: 0;
+        padding: 0;
+        transition: 0.3s;
+        color: $mercury;
+        @include mobile-header;
+        font-weight: lighter;
+    
+        &:hover {
+            transform: scale(1.2);
+            color: $white;
+        }
+    
+        @include tablet {
+            padding-left: 2rem;
+        }
+    }
+
     &__items {
         @include row;
         justify-content: space-between;
         margin: 0;
         padding: 0;
         text-align: center;
-        padding-top: 0.4rem;
-        font-size: 0.875rem;
+        padding-top: 1rem;
+        font-size: 1.5rem;
+        width: 100%;
 
         &--left {
             padding: 0;
@@ -105,22 +126,6 @@ header {
             padding-left: 3.2rem;
             max-width: 18vh;
         }
-    }
-}
-.header-logo {
-    font-weight: lighter;
-    margin: 0;
-    padding: 0;
-    transition: 0.3s;
-    color: $mercury;
-
-    &:hover {
-        transform: scale(1.2);
-        color: $white;
-    }
-
-    @include tablet {
-        padding-left: 2rem;
     }
 }
 

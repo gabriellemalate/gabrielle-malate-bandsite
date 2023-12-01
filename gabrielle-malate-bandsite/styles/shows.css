@@ -28,6 +28,7 @@ header {
   align-items: center;
   padding-top: 0.8rem;
   width: 100%;
+  padding-top: 1.5rem;
 }
 @media (min-width: 768px) {
   .nav-bar__eq {
@@ -42,6 +43,28 @@ header {
     max-width: 58vh;
   }
 }
+.nav-bar__logo {
+  font-weight: lighter;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+  color: #E1E1E1;
+  font-size: 2.5rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+  margin: 0;
+  font-weight: lighter;
+}
+.nav-bar__logo:hover {
+  transform: scale(1.2);
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .nav-bar__logo {
+    padding-left: 2rem;
+  }
+}
 .nav-bar__items {
   display: flex;
   flex-direction: row;
@@ -50,13 +73,14 @@ header {
   margin: 0;
   padding: 0;
   text-align: center;
-  padding-top: 0.4rem;
-  font-size: 0.875rem;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  width: 100%;
 }
 .nav-bar__items--left {
   padding: 0;
-  border-bottom: 0.188rem solid white;
-  padding-bottom: 0.6rem;
+  border-bottom: 0.3rem solid white;
+  padding-bottom: 1.2rem;
   width: 50%;
   font-weight: 500;
   color: #FFFFFF;
@@ -81,15 +105,15 @@ header {
   width: 50%;
   transition: 0.5s;
   color: #AFAFAF;
-  border-bottom: 0.188rem solid white;
-  padding-bottom: 0.6rem;
+  border-bottom: 0.3rem solid white;
+  padding-bottom: 1.2rem;
   width: 50%;
   font-weight: 500;
   border-color: #323232;
 }
 .nav-bar__items--right:hover {
-  border-bottom: 0.188rem solid white;
-  padding-bottom: 0.6rem;
+  border-bottom: 0.3rem solid white;
+  padding-bottom: 1.2rem;
   width: 50%;
   font-weight: 500;
   font-weight: lighter;
@@ -104,8 +128,8 @@ header {
   }
 }
 .nav-bar__items--right:active {
-  border-bottom: 0.188rem solid white;
-  padding-bottom: 0.6rem;
+  border-bottom: 0.3rem solid white;
+  padding-bottom: 1.2rem;
   width: 50%;
   font-weight: 500;
   color: #FFFFFF;
@@ -129,23 +153,6 @@ header {
     width: 50%;
     padding-left: 3.2rem;
     max-width: 18vh;
-  }
-}
-
-.header-logo {
-  font-weight: lighter;
-  margin: 0;
-  padding: 0;
-  transition: 0.3s;
-  color: #E1E1E1;
-}
-.header-logo:hover {
-  transform: scale(1.2);
-  color: #FFFFFF;
-}
-@media (min-width: 768px) {
-  .header-logo {
-    padding-left: 2rem;
   }
 }
 

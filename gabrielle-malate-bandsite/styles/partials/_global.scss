@@ -25,7 +25,7 @@ header {
 
     &__eq {
         @include column;
-        padding-top: .8rem;
+        padding-top: 0.8rem;
         width: 100%;
 
         @include tablet {
@@ -41,29 +41,28 @@ header {
 
     &__items {
         @include row;
-        width: 100%;
-        justify-content:space-between;
+        justify-content: space-between;
         margin: 0;
         padding: 0;
         text-align: center;
-        padding-top: .4rem;
-        font-size: .875rem;
+        padding-top: 0.4rem;
+        font-size: 0.875rem;
 
         &--left {
             padding: 0;
             @include current-page--mobile;
             color: $white;
-            transition: .8s;
+            transition: 0.8s;
 
             &:hover {
                 font-weight: lighter;
-                color: $mercury;
+                color: $silver;
             }
 
-            &:active{
+            &:active {
                 color: $white;
             }
-        
+
             @include tablet {
                 @include current-page--tablet;
             }
@@ -71,8 +70,8 @@ header {
 
         &--right {
             width: 50%;
-            transition: .5s;
-            color: $mercury;
+            transition: 0.5s;
+            color: $silver;
             @include current-page--mobile;
             border-color: $bandsite__black;
 
@@ -95,12 +94,12 @@ header {
                     border: 0;
                 }
             }
-        
+
             @include tablet {
-                padding-bottom: .6rem;
+                padding-bottom: 0.6rem;
             }
         }
-    
+
         @include tablet {
             width: 50%;
             padding-left: 3.2rem;
@@ -112,7 +111,7 @@ header {
     font-weight: lighter;
     margin: 0;
     padding: 0;
-    transition: .3s;
+    transition: 0.3s;
     color: $mercury;
 
     &:hover {
@@ -135,8 +134,8 @@ footer {
         @include mobile-header;
         padding: 0;
         padding-top: 1.4rem;
-        padding-bottom: .2rem;
-    
+        padding-bottom: 0.2rem;
+
         @include tablet {
             padding-top: 1rem;
             @include section-header--tablet;
@@ -145,11 +144,12 @@ footer {
         }
     }
 
-    & p, & a {
+    & p,
+    & a {
         @include mobile-par;
 
         @include tablet {
-            font-size: .813rem;
+            font-size: 0.813rem;
             line-height: 1.25rem;
         }
     }
@@ -171,22 +171,22 @@ footer {
             margin-bottom: 0;
 
             @include tablet {
-                margin-top: .8rem;
+                margin-top: 0.8rem;
             }
         }
 
         @include tablet {
-            font-size: .875rem;
+            font-size: 0.875rem;
             line-height: 1.25rem;
         }
     }
 
     & p:nth-child(even) {
-        margin-bottom: .8rem;
+        margin-bottom: 0.8rem;
         margin-top: 0;
-        
+
         @include tablet {
-            padding-bottom: .6rem;
+            padding-bottom: 0.6rem;
         }
     }
 
@@ -194,7 +194,7 @@ footer {
         margin-bottom: 0;
     }
 
-    @include tablet{
+    @include tablet {
         padding-left: 0;
         @include column;
     }
@@ -204,7 +204,7 @@ footer {
     margin-top: 4rem;
     font-size: 1.5em;
     font-weight: lighter;
-    margin-bottom: .2rem;
+    margin-bottom: 0.2rem;
 
     @include tablet {
         display: none;
@@ -251,26 +251,25 @@ footer {
         }
     }
 
-        & img {
-            transition: .4s;
-            margin-right: 1.6rem;
+    & img {
+        transition: 0.4s;
+        margin-right: 1.6rem;
 
-            &:hover {
-                transform: scale(1.2)
-            }
-
-            @include tablet {
-                margin-right: 0;
-            }
+        &:hover {
+            transform: scale(1.2);
         }
 
+        @include tablet {
+            margin-right: 0;
+        }
+    }
+
     @include tablet {
-        width: 60%;       
+        width: 60%;
     }
 }
 
 .contact {
-
     &__person {
         @include tablet {
             margin-right: 3.6rem;
@@ -289,17 +288,17 @@ footer {
     }
 
     & a {
-        padding-bottom: .2rem;
+        padding-bottom: 0.2rem;
     }
 }
 .copyright {
-    font-size: .625rem;
+    font-size: 0.625rem;
     line-height: 1.25rem;
     padding-bottom: 1rem;
 
     @include tablet {
         margin-top: 3rem;
-        font-size: .875rem;
+        font-size: 0.875rem;
         padding-bottom: 2.2rem;
         width: 90%;
         max-width: 64rem;

@@ -46,7 +46,6 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -65,7 +64,7 @@ header {
 }
 .nav-bar__items--left:hover {
   font-weight: lighter;
-  color: #E1E1E1;
+  color: #AFAFAF;
 }
 .nav-bar__items--left:active {
   color: #FFFFFF;
@@ -81,7 +80,7 @@ header {
 .nav-bar__items--right {
   width: 50%;
   transition: 0.5s;
-  color: #E1E1E1;
+  color: #AFAFAF;
   border-bottom: 0.188rem solid white;
   padding-bottom: 0.6rem;
   width: 50%;
@@ -417,13 +416,18 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*
-      &__photo-and-quote p,
-      & h3,
-      & p {
-          margin: 0 1rem;
-      }
-  */
+}
+.about__top-eq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1280px) {
+  .about__top-eq {
+    align-items: flex-start;
+    width: 66%;
+  }
 }
 .about__photo-and-quote {
   display: flex;
@@ -564,14 +568,15 @@ h1 {
     line-height: 2rem;
     margin-top: 2rem;
     margin-bottom: 0.9rem;
+    text-align: start;
   }
 }
 @media (min-width: 1280px) {
   #about__photo-and-quote--saying {
-    width: 58%;
+    width: 82%;
     margin-top: 2.4rem;
-    margin-left: 13.8rem;
     line-height: 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -585,8 +590,8 @@ h1 {
 }
 @media (min-width: 1280px) {
   #about__photo-and-quote--author {
-    margin-left: 10rem;
     font-size: 1rem;
+    width: 66%;
   }
 }
 

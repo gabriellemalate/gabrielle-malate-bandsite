@@ -46,7 +46,6 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -65,7 +64,7 @@ header {
 }
 .nav-bar__items--left:hover {
   font-weight: lighter;
-  color: #E1E1E1;
+  color: #AFAFAF;
 }
 .nav-bar__items--left:active {
   color: #FFFFFF;
@@ -81,7 +80,7 @@ header {
 .nav-bar__items--right {
   width: 50%;
   transition: 0.5s;
-  color: #E1E1E1;
+  color: #AFAFAF;
   border-bottom: 0.188rem solid white;
   padding-bottom: 0.6rem;
   width: 50%;

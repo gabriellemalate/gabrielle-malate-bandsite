@@ -158,6 +158,11 @@ header {
 
         @include tablet {
             width: 90%;
+            max-width: 110vh;
+        }
+
+        @include desktop {
+            border: green 1px solid;
         }
     }
 
@@ -171,7 +176,6 @@ header {
             border: 1px red solid;
         }
         @include desktop {
-            width: 90%;
             max-width: 200vh;
         }
     }
@@ -221,7 +225,7 @@ header {
         @include mobile-par;
 
         @include tablet {
-            font-size: 0.813rem;
+            font-size: 0.875rem;
             line-height: 1.25rem;
         }
     
@@ -284,25 +288,24 @@ header {
     }
 
     &__contact {
-        &--person {
-            @include tablet {
-                width: 100%;
+            &--email {
+                font-size: .8rem;
+
+                @include desktop {
+                    font-size: .9rem;
+                }
             }
-    
-            @include desktop {
-                width: 100%;
-            }
-        }
     
         @include tablet {
             @include row;
-            justify-content: flex-start;
-            width: 90%;
-            max-width: 64rem;
+            justify-content: space-between;
+            width: 96%;
+            max-width: 77.4vh;
         }
-    
-        & a {
-            padding-bottom: 0.2rem;
+
+        @include desktop {
+            width: 72%;
+            max-width: 140vh;
         }
     }
 

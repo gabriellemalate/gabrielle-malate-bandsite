@@ -223,8 +223,9 @@
                 @include desktop {
                     width: 49%;
                     margin-right: 0;
-                    max-width: 45vh;
+                    border: 1px brown solid;
                     line-height: 1.25rem;
+                    max-width: 80vh;
                 }
             }
         }

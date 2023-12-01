@@ -145,10 +145,17 @@ header {
 }
 
 /* Footer */
-footer {
+.footer {
     background-color: $bandsite__black;
     color: $white;
-    padding-left: 6%;
+    @include column;
+    align-items: center;
+
+    &__eq {
+    @include column;
+    align-items: start;
+    width: 90%;
+    }
 
     & h2 {
         @include mobile-header;
@@ -218,109 +225,121 @@ footer {
         padding-left: 0;
         @include column;
     }
-}
 
-#footer__logo--mobile {
-    margin-top: 4rem;
-    font-size: 1.5em;
-    font-weight: lighter;
-    margin-bottom: 0.2rem;
-
-    @include tablet {
-        display: none;
-    }
-}
-#footer__logo--tablet {
-    display: none;
-    font-size: 1.5em;
-    font-weight: lighter;
-
-    @include tablet {
-        display: block;
-        padding-top: 1.2rem;
-    }
-}
-#footer__top--tablet {
-    @include tablet {
-        @include row;
-        justify-content: space-between;
-        padding-top: 1rem;
-        width: 90%;
-        max-width: 112vh;
-    }
-}
-.social {
-    @include tablet {
-        @include row;
-        width: 8rem;
-        justify-content: flex-start;
-    }
-
-    &__row {
-        margin: 1rem 0;
-        margin-bottom: 0;
-
+    &__top--tablet {
         @include tablet {
-            margin: 0;
-            padding-top: 1.2rem;
             @include row;
             justify-content: space-between;
-            width: 7.4rem;
-            max-width: 11rem;
-            margin-left: 6%;
+            padding-top: 1rem;
+            width: 90%;
+            max-width: 112vh;
+            border: 1px red solid;
         }
-    }
-
-    & img {
-        transition: 0.4s;
-        margin-right: 1.6rem;
-
-        &:hover {
-            transform: scale(1.2);
-        }
-
-        @include tablet {
-            margin-right: 0;
-        }
-    }
-
-    @include tablet {
-        width: 60%;
-    }
-}
-
-.contact {
-    &__person {
-        @include tablet {
-            margin-right: 3.6rem;
-        }
-
         @include desktop {
-            margin-right: 6%;
+            width: 90%;
+            max-width: 200vh;
         }
     }
 
-    @include tablet {
-        @include row;
-        justify-content: flex-start;
-        width: 90%;
-        max-width: 64rem;
+    &__social {
+        @include tablet {
+            @include row;
+            width: 8rem;
+            justify-content: flex-start;
+        }
+    
+        &--row {
+            margin: 1rem 0;
+            margin-bottom: 0;
+    
+            @include tablet {
+                margin: 0;
+                padding-top: 1.2rem;
+                @include row;
+                justify-content: space-between;
+                width: 7.4rem;
+                max-width: 11rem;
+                margin-left: 6%;
+            }
+        }
+    
+        & img {
+            transition: 0.4s;
+            margin-right: 1.6rem;
+    
+            &:hover {
+                transform: scale(1.2);
+            }
+    
+            @include tablet {
+                margin-right: 0;
+            }
+        }
+    
+        @include tablet {
+            width: 60%;
+        }
     }
 
-    & a {
-        padding-bottom: 0.2rem;
+    &__contact {
+        &--person {
+            @include tablet {
+                margin-right: 3.6rem;
+            }
+    
+            @include desktop {
+                margin-right: 6%;
+            }
+        }
+    
+        @include tablet {
+            @include row;
+            justify-content: flex-start;
+            width: 90%;
+            max-width: 64rem;
+        }
+    
+        & a {
+            padding-bottom: 0.2rem;
+        }
     }
-}
-.copyright {
-    font-size: 0.625rem;
-    line-height: 1.25rem;
-    padding-bottom: 1rem;
 
-    @include tablet {
-        margin-top: 3rem;
-        font-size: 0.875rem;
-        padding-bottom: 2.2rem;
-        width: 90%;
-        max-width: 64rem;
+    &__logo{
+    
+        &--mobile {
+            margin-top: 4rem;
+            font-size: 1.5em;
+            font-weight: lighter;
+            margin-bottom: 0.2rem;
+        
+            @include tablet {
+                display: none;
+            }
+        }
+        &--tablet {
+            display: none;
+            font-size: 1.5em;
+            font-weight: lighter;
+        
+            @include tablet {
+                display: block;
+                padding-top: 1.2rem;
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: 0.625rem;
+        line-height: 1.25rem;
+        padding-bottom: 1rem;
+    
+        @include tablet {
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            padding-bottom: 2.2rem;
+            width: 90%;
+            max-width: 64rem;
+        }
     }
 }
+

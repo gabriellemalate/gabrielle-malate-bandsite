@@ -70,7 +70,7 @@ header {
         }
 
         @include tablet {
-            font-size: 1.5rem;
+            font-size: $sub-tab;
         }
     }
 
@@ -81,7 +81,7 @@ header {
         padding: 0;
         text-align: center;
         padding-top: 0.4rem;
-        font-size: 0.875rem;
+        font-size: $sub-mob;
         width: 100%;
 
         &--left {
@@ -139,7 +139,7 @@ header {
         @include tablet {
             width: 60%;
             max-width: 28vh;
-            font-size: 0.875rem;
+            font-size: $bod-tab;
             padding-left: 2rem;
         }
     }
@@ -211,7 +211,7 @@ header {
         }
 
         @include tablet {
-            font-size: 0.875rem;
+            font-size: $bod-tab;
             line-height: 1.25rem;
         }
     }
@@ -220,8 +220,8 @@ header {
         @include mobile-par;
 
         @include tablet {
-            font-size: 0.875rem;
-            line-height: 1.25rem;
+            font-size: $bod-tab;
+            line-height: $foot-line;
         }
 
         &:nth-child(even) {
@@ -305,7 +305,7 @@ header {
     &__logo {
         &--mobile {
             margin-top: 4rem;
-            font-size: 1.5em;
+            font-size: $head-mob;
             font-weight: lighter;
             margin-bottom: 0.2rem;
 
@@ -315,7 +315,7 @@ header {
         }
         &--tablet {
             display: none;
-            font-size: 1.5rem;
+            font-size: $sub-tab;
             font-weight: lighter;
 
             @include tablet {
@@ -327,12 +327,12 @@ header {
 
     &__copyright {
         font-size: 0.625rem;
-        line-height: 1.25rem;
+        line-height: $foot-line;
         padding-bottom: 1rem;
 
         @include tablet {
             margin-top: 3rem;
-            font-size: 0.875rem;
+            font-size: $bod-tab;
             padding-bottom: 2.2rem;
             width: 90%;
             max-width: 64rem;

@@ -23,17 +23,20 @@
     flex-direction: row;
     align-items: center;
 }
+
 @mixin current-page--mobile {
     border-bottom: 0.2rem solid white;
     padding-bottom: .6rem;
     width: 50%;
     font-weight: 500;
 }
+
 @mixin current-page--tablet {
     border: 0;
     text-decoration: underline 0.188rem;
     text-underline-offset: 1.62rem;
 }
+
 @mixin hero {
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,18 +60,18 @@
 
 @mixin mobile-sub {
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: $sub-mob;
     line-height: 1.375rem;;
 }
 
 @mixin mobile-par {
-    font-size: 0.813rem;
+    font-size: $bod-mob;
     line-height: 1.125rem;
     font-weight: 400;
 }
 
 @mixin section-header--tablet {
-    font-size: 2.25rem;
+    font-size: $head-tab;
     line-height: 2.75rem;
     font-weight: 700;
 }

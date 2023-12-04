@@ -401,37 +401,40 @@ body a {
   background-size: cover;
   background-position: center center;
   height: 58vw;
+  height: 36vh;
 }
 .hero__overlay {
   background: rgba(40, 40, 40, 0.5);
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero__overlay--align {
   width: 90%;
 }
 .hero__overlay--align h1 {
-  margin: 0;
+  padding: 1rem 0rem;
   color: #FFFFFF;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
   letter-spacing: 0.04rem;
   margin: 0;
+  width: 90%;
 }
-@media (min-width: 768px) {
-  .hero__overlay--align h1 {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
-    margin-left: 1.4rem;
-    margin-top: 2rem;
-  }
+.hero__overlay--align h2 {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 300;
+  margin: 0;
+  margin-top: 1.8rem;
 }
-@media (min-width: 1280px) {
-  .hero__overlay--align h1 {
-    margin-left: 8rem;
-    font-size: 3.8rem;
-  }
+.hero__overlay--align iframe {
+  height: 12vh;
 }
 @media (min-width: 768px) {
   .hero {
@@ -442,4 +445,29 @@ body a {
   .hero {
     height: 54vw;
   }
+}
+
+/* Shows Section */
+.shows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shows__all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+  width: 90%;
+  border: 1px solid red;
+}
+.shows__boxes {
+  width: 100%;
+  border: 1px green solid;
+}
+.shows__boxes--show h3 {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #AFAFAF;
+  margin: 0.4rem 0;
 }/*# sourceMappingURL=shows.css.map */

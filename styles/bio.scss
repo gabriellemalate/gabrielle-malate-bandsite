@@ -155,7 +155,7 @@
                 height: 35vw;
             }
         }
-    } 
+    }
 
     &__main-text {
         @include column;
@@ -290,19 +290,19 @@
 
     @include tablet {
         padding-top: 1rem;
-        padding-bottom: .8rem;
+        padding-bottom: 0.8rem;
     }
 }
 
 .comment {
     @include column;
     align-items: center;
-    padding-bottom: .4rem;
+    padding-bottom: 0.4rem;
 
     &__all {
-    @include column;
-    width: 90%;
-    align-items: flex-start;
+        @include column;
+        width: 90%;
+        align-items: flex-start;
 
         @include tablet {
             max-width: 110vh;
@@ -315,7 +315,7 @@
         }
 
         & h2 {
-            margin: .8rem 0;
+            margin: 0.8rem 0;
 
             @include tablet {
                 @include section-header--tablet;
@@ -344,7 +344,7 @@
 
     &__old {
         @include tablet {
-            margin: .8rem 0rem;
+            margin: 0.8rem 0rem;
         }
 
         &--top {
@@ -352,13 +352,13 @@
             justify-content: space-between;
             width: 100%;
 
-            & h3{
-                margin: .2rem 0;
+            & h3 {
+                margin: 0.2rem 0;
                 @include mobile-sub;
                 font-weight: 500;
                 color: $bandsite__black;
             }
-    
+
             & time {
                 color: $silver;
                 @include mobile-sub;
@@ -375,7 +375,7 @@
         }
 
         & input {
-            border: $mercury .1rem solid;
+            border: $mercury 0.1rem solid;
             width: 98%;
             border-radius: 4px;
             background-color: $alabaster;
@@ -383,7 +383,7 @@
             &::placeholder {
                 color: $bandsite__black;
                 font-weight: lighter;
-                letter-spacing: .04rem;
+                letter-spacing: 0.04rem;
                 padding-left: 4%;
 
                 @include tablet {
@@ -394,10 +394,10 @@
 
         & h4 {
             color: $silver;
-            font-size: .8rem;
+            font-size: 0.8rem;
             font-weight: 500;
             margin: 0;
-            padding-bottom: .2rem;
+            padding-bottom: 0.2rem;
         }
 
         & button {
@@ -408,7 +408,7 @@
             width: 100%;
             height: 2.5rem;
             margin-top: 1rem;
-            margin-bottom: .6rem;
+            margin-bottom: 0.6rem;
             font-size: $sub-mob;
 
             &:hover {
@@ -419,7 +419,7 @@
                 width: 30%;
                 align-self: flex-end;
                 margin-top: 1.4rem;
-                margin-bottom: .8rem;
+                margin-bottom: 0.8rem;
             }
         }
 
@@ -458,10 +458,10 @@
             & p {
                 @include mobile-par;
                 color: $bandsite__black;
-                margin: .2rem 0;
+                margin: 0.2rem 0;
 
                 @include tablet {
-                    @include body-tab
+                    @include body-tab;
                 }
             }
         }

@@ -13,20 +13,55 @@
     max-height: 54vh;
 
     @include tablet {
-        height: 100vw;
-        max-height: 120vh;
-        padding-bottom: 2.4rem;
+        height: 60vw;
+        max-height: 64vh;
+        padding-bottom: 2.2rem;
     }
 
     &__overlay {
         @include hero-overlay;
         @include column;
+    }
 
-        &--align {
-            width: 90%;
+    &__align {
+        width: 90%;
+
+        @include tablet {
+            padding: 1rem 0;
+        }
+
+        @include desktop {
+            @include row;
+            justify-content: space-between;
+            width: 80%;
+        }
+
+        &--sc{
+            @include desktop {
+                @include row;
+                justify-content: flex-end;
+            }
+
+        & iframe {
+            height: 28vw;
+            max-height: 15vh;
+            border-radius: 4px;
+            width: 100%;
 
             @include tablet {
-                padding: 1rem 0;
+                width: 62%;
+                margin-top: 2.2rem;
+            }
+
+            @include desktop {
+                width: 32vw;
+            }
+        }
+    }
+
+        &--text {
+            @include desktop {
+                border: 1px red solid;
             }
 
             & h1 {
@@ -34,51 +69,33 @@
                 color: $white;
                 @include mobile-header;
                 width: 90%;
-
+    
                 @include tablet {
                     @include page-header--tablet;
                     padding: .8rem 0;
+                    max-width: 40rem;
                 }
-
+    
                 @include desktop {
-                    color: red;
+                    width: 40vw;
+                    max-width: 60rem;
                 }
             }
-
+    
             & h2 {
                 color: $white;
                 @include mobile-sub;
                 font-weight: 300;
                 margin: 0;
                 margin-top: 1.8rem;
-
+    
                 @include tablet {
                     @include mobile-header;
                     font-weight: 500;
                     padding-top: 2.6rem;
                 }
             }
-
-            & iframe {
-                height: 28vw;
-                max-height: 15vh;
-                border-radius: 4px;
-                width: 100%;
-
-                @include tablet {
-                    width: 62%;
-                    margin-top: 2.2rem;
-                }
-            }
         }
-    }
-
-    @include tablet {
-        height: 58.4vw;
-    }
-
-    @include desktop {
-        height: 54vw;
     }
 }
 

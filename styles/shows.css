@@ -406,9 +406,9 @@ body a {
 }
 @media (min-width: 768px) {
   .hero {
-    height: 100vw;
-    max-height: 120vh;
-    padding-bottom: 2.4rem;
+    height: 60vw;
+    max-height: 64vh;
+    padding-bottom: 2.2rem;
   }
 }
 .hero__overlay {
@@ -419,15 +419,54 @@ body a {
   flex-direction: column;
   align-items: center;
 }
-.hero__overlay--align {
+.hero__align {
   width: 90%;
 }
 @media (min-width: 768px) {
-  .hero__overlay--align {
+  .hero__align {
     padding: 1rem 0;
   }
 }
-.hero__overlay--align h1 {
+@media (min-width: 1280px) {
+  .hero__align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__align--sc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+.hero__align--sc iframe {
+  height: 28vw;
+  max-height: 15vh;
+  border-radius: 4px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hero__align--sc iframe {
+    width: 62%;
+    margin-top: 2.2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__align--sc iframe {
+    width: 32vw;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__align--text {
+    border: 1px red solid;
+  }
+}
+.hero__align--text h1 {
   padding: 1rem 0rem;
   color: #FFFFFF;
   font-size: 1.5rem;
@@ -438,18 +477,20 @@ body a {
   width: 90%;
 }
 @media (min-width: 768px) {
-  .hero__overlay--align h1 {
+  .hero__align--text h1 {
     font-size: 3.75rem;
     line-height: 4.25rem;
     padding: 0.8rem 0;
+    max-width: 40rem;
   }
 }
 @media (min-width: 1280px) {
-  .hero__overlay--align h1 {
-    color: red;
+  .hero__align--text h1 {
+    width: 40vw;
+    max-width: 60rem;
   }
 }
-.hero__overlay--align h2 {
+.hero__align--text h2 {
   color: #FFFFFF;
   font-weight: 600;
   font-size: 0.875rem;
@@ -459,7 +500,7 @@ body a {
   margin-top: 1.8rem;
 }
 @media (min-width: 768px) {
-  .hero__overlay--align h2 {
+  .hero__align--text h2 {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
@@ -467,28 +508,6 @@ body a {
     margin: 0;
     font-weight: 500;
     padding-top: 2.6rem;
-  }
-}
-.hero__overlay--align iframe {
-  height: 28vw;
-  max-height: 15vh;
-  border-radius: 4px;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .hero__overlay--align iframe {
-    width: 62%;
-    margin-top: 2.2rem;
-  }
-}
-@media (min-width: 768px) {
-  .hero {
-    height: 58.4vw;
-  }
-}
-@media (min-width: 1280px) {
-  .hero {
-    height: 54vw;
   }
 }
 

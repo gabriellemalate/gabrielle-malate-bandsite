@@ -1,3 +1,4 @@
+@use "./variables" as *;
 @use "./typography" as *;
 
 @mixin tablet {
@@ -25,7 +26,7 @@
 }
 
 @mixin current-page--mobile {
-    border-bottom: 0.2rem solid white;
+    border-bottom: 0.2rem solid $white;
     padding-bottom: .6rem;
     width: 50%;
     font-weight: 500;

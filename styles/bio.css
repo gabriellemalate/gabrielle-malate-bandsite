@@ -3,18 +3,15 @@ body {
   font-family: Avenir, monospace;
   margin: 0;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
+body header {
+  margin: 0;
 }
-
-ul {
+body ul {
   list-style-type: none;
 }
-
-header {
-  margin: 0;
+body a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Navigation Bar */
@@ -102,7 +99,7 @@ header {
 }
 .nav-bar__items--left {
   padding: 0;
-  border-bottom: 0.2rem solid white;
+  border-bottom: 0.2rem solid #FFFFFF;
   padding-bottom: 0.6rem;
   width: 50%;
   font-weight: 500;
@@ -128,14 +125,14 @@ header {
   width: 50%;
   transition: 0.5s;
   color: #AFAFAF;
-  border-bottom: 0.2rem solid white;
+  border-bottom: 0.2rem solid #FFFFFF;
   padding-bottom: 0.6rem;
   width: 50%;
   font-weight: 500;
   border-color: #323232;
 }
 .nav-bar__items--right:hover {
-  border-bottom: 0.2rem solid white;
+  border-bottom: 0.2rem solid #FFFFFF;
   padding-bottom: 0.6rem;
   width: 50%;
   font-weight: 500;
@@ -151,7 +148,7 @@ header {
   }
 }
 .nav-bar__items--right:active {
-  border-bottom: 0.2rem solid white;
+  border-bottom: 0.2rem solid #FFFFFF;
   padding-bottom: 0.6rem;
   width: 50%;
   font-weight: 500;
@@ -361,7 +358,7 @@ header {
 }
 .footer__logo--mobile {
   margin-top: 4rem;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: lighter;
   margin-bottom: 0.2rem;
 }

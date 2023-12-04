@@ -6,16 +6,19 @@
 body {
     font-family: Avenir, monospace;
     margin: 0;
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
-ul {
-    list-style-type: none;
-}
-header {
-    margin: 0;
+
+    header {
+        margin: 0;
+    }
+
+    & ul {
+        list-style-type: none;
+    }
+
+    & a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 /* Navigation Bar */

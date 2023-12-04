@@ -3,18 +3,15 @@ body {
   font-family: Avenir, monospace;
   margin: 0;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
+body header {
+  margin: 0;
 }
-
-ul {
+body ul {
   list-style-type: none;
 }
-
-header {
-  margin: 0;
+body a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Navigation Bar */
@@ -102,7 +99,7 @@ header {
 }
 .nav-bar__items--left {
   padding: 0;
-  border-bottom: 0.2rem solid white;
+  border-bottom: 0.2rem solid #FFFFFF;
   padding-bottom: 0.6rem;
   width: 50%;
   font-weight: 500;
@@ -128,14 +125,14 @@ header {
   width: 50%;
   transition: 0.5s;
   color: #AFAFAF;
-  border-bottom: 0.2rem solid white;
+  border-bottom: 0.2rem solid #FFFFFF;
   padding-bottom: 0.6rem;
   width: 50%;
   font-weight: 500;
   border-color: #323232;
 }
 .nav-bar__items--right:hover {
-  border-bottom: 0.2rem solid white;
+  border-bottom: 0.2rem solid #FFFFFF;
   padding-bottom: 0.6rem;
   width: 50%;
   font-weight: 500;
@@ -151,7 +148,7 @@ header {
   }
 }
 .nav-bar__items--right:active {
-  border-bottom: 0.2rem solid white;
+  border-bottom: 0.2rem solid #FFFFFF;
   padding-bottom: 0.6rem;
   width: 50%;
   font-weight: 500;
@@ -361,7 +358,7 @@ header {
 }
 .footer__logo--mobile {
   margin-top: 4rem;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: lighter;
   margin-bottom: 0.2rem;
 }
@@ -393,5 +390,56 @@ header {
     padding-bottom: 2.2rem;
     width: 90%;
     max-width: 64rem;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("../assets/Images/hero-shows.jpg");
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 58vw;
+}
+.hero__overlay {
+  background: rgba(40, 40, 40, 0.5);
+  width: 100%;
+  height: 100%;
+}
+.hero__overlay--align {
+  width: 90%;
+}
+.hero__overlay--align h1 {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .hero__overlay--align h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    margin-left: 1.4rem;
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__overlay--align h1 {
+    margin-left: 8rem;
+    font-size: 3.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 58.4vw;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 54vw;
   }
 }/*# sourceMappingURL=shows.css.map */

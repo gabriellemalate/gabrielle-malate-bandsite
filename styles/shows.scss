@@ -10,13 +10,11 @@
     margin: 0;
     @include hero;
 
+
     &__overlay {
         @include hero-overlay;
-        @include row;
-        justify-content: center;
 
         &--align {
-            @include row;
             width: 90%;
 
             & h1 {

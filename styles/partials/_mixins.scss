@@ -76,3 +76,8 @@
     line-height: 2.75rem;
     font-weight: 700;
 }
+
+@mixin body-tab {
+    font-size: $bod-tab;
+    line-height: $bod-tab-line;
+}

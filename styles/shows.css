@@ -401,7 +401,8 @@ body a {
   background-size: cover;
   background-position: center center;
   height: 58vw;
-  height: 36vh;
+  height: 82vw;
+  max-height: 58.2vh;
 }
 .hero__overlay {
   background: rgba(40, 40, 40, 0.5);
@@ -434,7 +435,7 @@ body a {
   margin-top: 1.8rem;
 }
 .hero__overlay--align iframe {
-  height: 12vh;
+  height: 28vw;
 }
 @media (min-width: 768px) {
   .hero {
@@ -460,14 +461,61 @@ body a {
   align-items: flex-start;
   width: 90%;
   border: 1px solid red;
+  padding-bottom: 0.4rem;
+}
+.shows__all h2 {
+  margin: 1.6rem 0 1.4rem;
+}
+.shows__all hr {
+  position: relative;
+  right: 2rem;
+  border-top: 1px solid #E1E1E1;
+  width: 120%;
 }
 .shows__boxes {
   width: 100%;
   border: 1px green solid;
 }
+.shows__boxes--show {
+  padding-top: 0.1rem;
+}
+.shows__boxes--show:hover {
+  background-color: #FAFAFA;
+}
+.shows__boxes--show:active {
+  background-color: #E1E1E1;
+}
 .shows__boxes--show h3 {
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 500;
   color: #AFAFAF;
-  margin: 0.4rem 0;
+  margin: 0;
+  margin-top: 0.6rem;
+  padding-bottom: 0.2rem;
+}
+.shows__boxes--show time {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-size: 0.813rem;
+}
+.shows__boxes--show p {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 0.2rem;
+  padding-top: 0.2rem;
+}
+.shows__boxes--show button {
+  width: 100%;
+  background-color: #323232;
+  color: #FFFFFF;
+  border-radius: 4px;
+  height: 2.6rem;
+  margin-top: 1rem;
+  border: 0;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.4rem;
 }/*# sourceMappingURL=shows.css.map */

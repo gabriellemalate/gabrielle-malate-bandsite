@@ -768,6 +768,7 @@ body a {
 @media (min-width: 768px) {
   .comment__all {
     max-width: 110vh;
+    margin-bottom: 1.2rem;
   }
 }
 @media (min-width: 1280px) {
@@ -805,6 +806,11 @@ body a {
 .comment__all--boxes hr {
   border-top: 1px solid #E1E1E1;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .comment__old {
+    margin: 0.8rem 0rem;
+  }
 }
 .comment__old--top {
   display: flex;
@@ -914,7 +920,7 @@ body a {
 .comment__entirely img {
   border-radius: 50%;
   width: 12.5%;
-  max-width: 5.6vh;
+  max-width: 5.4vh;
 }
 .comment__entirely--text {
   display: flex;

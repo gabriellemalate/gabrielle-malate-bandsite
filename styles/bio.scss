@@ -306,6 +306,7 @@
 
         @include tablet {
             max-width: 110vh;
+            margin-bottom: 1.2rem;
         }
 
         @include desktop {
@@ -342,6 +343,9 @@
     }
 
     &__old {
+        @include tablet {
+            margin: .8rem 0rem;
+        }
 
         &--top {
             @include row;
@@ -439,11 +443,10 @@
         align-items: flex-start;
         width: 100%;
 
-
         & img {
             border-radius: 50%;
             width: 12.5%;
-            max-width: 5.6vh;
+            max-width: 5.4vh;
         }
 
         &--text {

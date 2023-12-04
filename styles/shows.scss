@@ -10,7 +10,13 @@
     margin: 0;
     @include hero;
     height: 82vw;
-    max-height: 58.2vh;
+    max-height: 54vh;
+
+    @include tablet {
+        height: 100vw;
+        max-height: 120vh;
+        padding-bottom: 2.4rem;
+    }
 
     &__overlay {
         @include hero-overlay;
@@ -19,11 +25,24 @@
         &--align {
             width: 90%;
 
+            @include tablet {
+                padding: 1rem 0;
+            }
+
             & h1 {
                 padding: 1rem 0rem;
                 color: $white;
                 @include mobile-header;
                 width: 90%;
+
+                @include tablet {
+                    @include page-header--tablet;
+                    padding: .8rem 0;
+                }
+
+                @include desktop {
+                    color: red;
+                }
             }
 
             & h2 {
@@ -32,10 +51,24 @@
                 font-weight: 300;
                 margin: 0;
                 margin-top: 1.8rem;
+
+                @include tablet {
+                    @include mobile-header;
+                    font-weight: 500;
+                    padding-top: 2.6rem;
+                }
             }
 
             & iframe {
                 height: 28vw;
+                max-height: 15vh;
+                border-radius: 4px;
+                width: 100%;
+
+                @include tablet {
+                    width: 62%;
+                    margin-top: 2.2rem;
+                }
             }
         }
     }

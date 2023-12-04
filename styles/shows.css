@@ -402,7 +402,14 @@ body a {
   background-position: center center;
   height: 58vw;
   height: 82vw;
-  max-height: 58.2vh;
+  max-height: 54vh;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 100vw;
+    max-height: 120vh;
+    padding-bottom: 2.4rem;
+  }
 }
 .hero__overlay {
   background: rgba(40, 40, 40, 0.5);
@@ -415,6 +422,11 @@ body a {
 .hero__overlay--align {
   width: 90%;
 }
+@media (min-width: 768px) {
+  .hero__overlay--align {
+    padding: 1rem 0;
+  }
+}
 .hero__overlay--align h1 {
   padding: 1rem 0rem;
   color: #FFFFFF;
@@ -425,6 +437,18 @@ body a {
   margin: 0;
   width: 90%;
 }
+@media (min-width: 768px) {
+  .hero__overlay--align h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    padding: 0.8rem 0;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__overlay--align h1 {
+    color: red;
+  }
+}
 .hero__overlay--align h2 {
   color: #FFFFFF;
   font-weight: 600;
@@ -434,8 +458,28 @@ body a {
   margin: 0;
   margin-top: 1.8rem;
 }
+@media (min-width: 768px) {
+  .hero__overlay--align h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.04rem;
+    margin: 0;
+    font-weight: 500;
+    padding-top: 2.6rem;
+  }
+}
 .hero__overlay--align iframe {
   height: 28vw;
+  max-height: 15vh;
+  border-radius: 4px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hero__overlay--align iframe {
+    width: 62%;
+    margin-top: 2.2rem;
+  }
 }
 @media (min-width: 768px) {
   .hero {

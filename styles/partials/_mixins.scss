@@ -46,7 +46,7 @@
 }
 
 @mixin hero-overlay {
-    background: rgba(40, 40, 40, 0.5);
+    background: rgba(40, 40, 40, 0.5); //this is bandsite black at half opacity via rgba
     width: 100%;
     height: 100%;
 }
@@ -80,4 +80,9 @@
 @mixin body-tab {
     font-size: $bod-tab;
     line-height: $bod-tab-line;
+}
+
+@mixin page-header--tablet {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
 }

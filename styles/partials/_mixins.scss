@@ -86,3 +86,12 @@
     font-size: 3.75rem;
     line-height: 4.25rem;
 }
+
+@mixin shows-h3 {
+    font-size: .66rem;
+                font-weight: 500;
+                color: $silver;
+                margin: 0;
+                margin-top: .6rem;
+                padding-bottom: .2rem;
+}

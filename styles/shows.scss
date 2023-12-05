@@ -21,6 +21,10 @@
     &__overlay {
         @include hero-overlay;
         @include column;
+
+        @include tablet {
+            padding-bottom: 2.2rem;
+        }
     }
 
     &__align {
@@ -107,27 +111,80 @@
         @include column;
         align-items: flex-start;
         width: 90%;
-        border: 1px solid red;
         padding-bottom: .4rem;
 
+        @include tablet {
+            padding-bottom: 1.52rem;
+        }
+
         & h2 {
-            margin: 1.6rem 0 1.4rem;
+            margin: 1.6rem 0 1rem;
+
+            @include tablet {
+                @include section-header--tablet;
+                margin: 2.8rem 0 .8rem;
+            }
         }
 
         & hr {
+            stroke-width: 1px $mercury;
+            width: 110%;
             position: relative;
-            right: 2rem;
-            border-top: 1px solid $mercury;
-            width: 120%;
+            right: 1rem;
+
+            @include tablet {
+                width: 100%;
+                position: static;
+                margin: 0;
+            }
+        }
+    } 
+
+    &__gone {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__invisible-row {
+        display: none;
+
+        @include tablet {
+            @include row;
+            border: 1px solid red;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        & h3 {
+            @include shows-h3;
+
+            @include tablet {
+                margin-top: 1.7rem;
+                padding-bottom: 0;
+            }
+        }
+
+        & p {
+            width: 8.4rem;
+            color: $white;
+            margin: 0;
         }
     }
 
     &__boxes{
         width: 100%;
-        border: 1px green solid;
+
+        &--first {
+            @include tablet {
+                @include column;
+
+            }
+        }
 
         &--show {
             padding-top: .1rem;
+            border: 1px solid green;
 
             &:hover {
                 background-color: $alabaster;
@@ -137,18 +194,25 @@
                 background-color: $mercury;
             }
 
+            @include tablet {
+                @include row;
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+                text-align: start;
+            }
+
             & h3 {
-                font-size: .66rem;
-                font-weight: 500;
-                color: $silver;
-                margin: 0;
-                margin-top: .6rem;
-                padding-bottom: .2rem;
+                @include shows-h3;
             }
 
             & time {
                 @include mobile-sub;
                 font-size: .813rem;
+
+                @include tablet {
+                    padding: 1.5rem 0rem;
+                }
             }
 
             & p {
@@ -156,6 +220,11 @@
                 margin: 0;
                 padding-bottom: .2rem;
                 padding-top: .2rem;
+                border: 1px solid blue;
+
+                @include tablet {
+                    padding: 1.5rem 0rem;
+                }
             }
 
             & button {
@@ -163,12 +232,17 @@
                 background-color: $bandsite__black;
                 color: $white;
                 border-radius: 4px;
-                height: 2.6rem;
+                height: 2.5rem;
                 margin-top: 1rem;
                 border: 0;
                 font-weight: 500;
                 font-size: $sub-mob;
                 margin-bottom: .4rem;
+
+                @include tablet {
+                    width: 10rem;
+                    margin: 0;
+                }
             }
         }
     }

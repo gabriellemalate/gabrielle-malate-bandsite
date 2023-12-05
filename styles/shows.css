@@ -528,7 +528,7 @@ body a {
 }
 @media (min-width: 768px) {
   .shows__all {
-    padding-bottom: 1.14rem;
+    padding-bottom: 1.42rem;
   }
 }
 @media (min-width: 1280px) {
@@ -539,6 +539,7 @@ body a {
     align-items: flex-start;
     width: 80%;
     justify-content: space-between;
+    margin: 2.4rem 0 1.6rem;
   }
 }
 .shows__all h2 {
@@ -570,6 +571,14 @@ body a {
     margin: 0;
   }
 }
+.shows__gone {
+  font-size: 0.66rem;
+  font-weight: 500;
+  color: #AFAFAF;
+  margin: 0;
+  margin-top: 0.6rem;
+  padding-bottom: 0.2rem;
+}
 @media (min-width: 768px) {
   .shows__gone {
     display: none;
@@ -583,7 +592,6 @@ body a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 1px solid red;
     width: 100%;
     justify-content: space-between;
   }
@@ -597,6 +605,11 @@ body a {
     width: 68%;
   }
 }
+@media (min-width: 1280px) {
+  .shows__invisible-row--eq {
+    width: 72.8%;
+  }
+}
 @media (min-width: 768px) {
   .shows__invisible-row--venlo {
     display: flex;
@@ -604,6 +617,11 @@ body a {
     align-items: center;
     justify-content: space-between;
     width: 63.4%;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__invisible-row--venlo {
+    width: 52%;
   }
 }
 .shows__invisible-row h3 {
@@ -634,6 +652,11 @@ body a {
     width: 68%;
   }
 }
+@media (min-width: 1280px) {
+  .shows__eq {
+    width: 72%;
+  }
+}
 @media (min-width: 768px) {
   .shows__eq--venlo {
     display: flex;
@@ -641,6 +664,11 @@ body a {
     align-items: center;
     justify-content: space-between;
     width: 63.4%;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__eq--venlo {
+    width: 52%;
   }
 }
 .shows__boxes {
@@ -660,7 +688,6 @@ body a {
 }
 .shows__boxes--show {
   padding-top: 0.1rem;
-  border: 1px solid green;
 }
 .shows__boxes--show:hover {
   background-color: #FAFAFA;
@@ -679,6 +706,17 @@ body a {
     text-align: start;
   }
 }
+.shows__boxes--show time {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-size: 0.813rem;
+}
+@media (min-width: 768px) {
+  .shows__boxes--show time {
+    font-size: 0.875rem;
+  }
+}
 .shows__boxes--show p {
   font-size: 0.813rem;
   line-height: 1.125rem;
@@ -686,7 +724,6 @@ body a {
   margin: 0;
   padding-bottom: 0.2rem;
   padding-top: 0.2rem;
-  border: 1px solid blue;
 }
 @media (min-width: 768px) {
   .shows__boxes--show p {
@@ -711,5 +748,10 @@ body a {
   .shows__boxes--show button {
     width: 10rem;
     margin: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__boxes--show button {
+    width: 9.4rem;
   }
 }/*# sourceMappingURL=shows.css.map */

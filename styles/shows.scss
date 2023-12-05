@@ -112,7 +112,7 @@
         padding-bottom: .4rem;
 
         @include tablet {
-            padding-bottom: 1.14rem;
+            padding-bottom: 1.42rem;
         }
 
         @include desktop {
@@ -120,6 +120,7 @@
             align-items: flex-start;
             width: 80%;
             justify-content: space-between;
+            margin: 2.4rem 0 1.6rem;
         }
 
         & h2 {
@@ -150,6 +151,8 @@
     } 
 
     &__gone {
+        @include shows-h3;
+
         @include tablet {
             display: none;
         }
@@ -160,7 +163,6 @@
 
         @include tablet {
             @include row;
-            border: 1px solid red;
             width: 100%;
             justify-content: space-between;
         }
@@ -171,6 +173,10 @@
                 justify-content: space-between;
                 width: 68%;
             }
+
+            @include desktop {
+                width: 72.8%;
+            }
         }
 
         &--venlo {
@@ -178,6 +184,10 @@
                 @include row;
                 justify-content: space-between;
                 width: 63.4%;
+            }
+
+            @include desktop {
+                width: 52%;
             }
         }
 
@@ -204,11 +214,19 @@
             width: 68%
         }
 
+        @include desktop {
+            width: 72%;
+        }
+
         &--venlo {
             @include tablet {
                 @include row;
                 justify-content: space-between;
                 width: 63.4%;
+            }
+
+            @include desktop {
+                width: 52%;
             }
         }
     }
@@ -228,7 +246,6 @@
 
         &--show {
             padding-top: .1rem;
-            border: 1px solid green;
 
             &:hover {
                 background-color: $alabaster;
@@ -246,12 +263,20 @@
                 text-align: start;
             }
 
+            & time {
+                @include mobile-sub;
+                font-size: .813rem;
+
+                @include tablet {
+                    font-size: .875rem;
+                }
+            }
+
             & p {
                 @include mobile-par;
                 margin: 0;
                 padding-bottom: .2rem;
                 padding-top: .2rem;
-                border: 1px solid blue;
 
                 @include tablet {
                     padding: 1.5rem 0rem;
@@ -274,6 +299,10 @@
                 @include tablet {
                     width: 10rem;
                     margin: 0;
+                }
+
+                @include desktop {
+                    width: 9.4rem;
                 }
             }
         }

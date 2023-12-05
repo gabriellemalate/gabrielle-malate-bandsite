@@ -199,6 +199,11 @@ body a {
     max-width: 110vh;
   }
 }
+@media (min-width: 1280px) {
+  .footer__eq {
+    max-width: 140vh;
+  }
+}
 @media (min-width: 768px) {
   .footer__top--tablet {
     display: flex;

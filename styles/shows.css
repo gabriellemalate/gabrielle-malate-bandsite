@@ -439,6 +439,7 @@ body a {
     align-items: center;
     justify-content: space-between;
     width: 80%;
+    margin-top: 9.12rem;
   }
 }
 @media (min-width: 1280px) {
@@ -464,11 +465,6 @@ body a {
 @media (min-width: 1280px) {
   .hero__align--sc iframe {
     width: 32vw;
-  }
-}
-@media (min-width: 1280px) {
-  .hero__align--text {
-    border: 1px red solid;
   }
 }
 .hero__align--text h1 {

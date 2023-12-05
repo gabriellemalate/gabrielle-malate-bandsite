@@ -528,7 +528,17 @@ body a {
 }
 @media (min-width: 768px) {
   .shows__all {
-    padding-bottom: 1.52rem;
+    padding-bottom: 1.14rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__all {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-items: flex-start;
+    width: 80%;
+    justify-content: space-between;
   }
 }
 .shows__all h2 {
@@ -540,6 +550,11 @@ body a {
     line-height: 2.75rem;
     font-weight: 700;
     margin: 2.8rem 0 0.8rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__all h2 {
+    margin-top: 0.6rem;
   }
 }
 .shows__all hr {
@@ -573,6 +588,24 @@ body a {
     justify-content: space-between;
   }
 }
+@media (min-width: 768px) {
+  .shows__invisible-row--eq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 68%;
+  }
+}
+@media (min-width: 768px) {
+  .shows__invisible-row--venlo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 63.4%;
+  }
+}
 .shows__invisible-row h3 {
   font-size: 0.66rem;
   font-weight: 500;
@@ -585,15 +618,38 @@ body a {
   .shows__invisible-row h3 {
     margin-top: 1.7rem;
     padding-bottom: 0;
+    font-size: 0.75rem;
   }
 }
-.shows__invisible-row p {
-  width: 8.4rem;
+.shows__invisible-row p, .shows__invisible-row strong {
   color: #FFFFFF;
   margin: 0;
 }
+@media (min-width: 768px) {
+  .shows__eq {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 68%;
+  }
+}
+@media (min-width: 768px) {
+  .shows__eq--venlo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 63.4%;
+  }
+}
 .shows__boxes {
   width: 100%;
+}
+@media (min-width: 1280px) {
+  .shows__boxes {
+    width: 75%;
+  }
 }
 @media (min-width: 768px) {
   .shows__boxes--first {
@@ -623,25 +679,6 @@ body a {
     text-align: start;
   }
 }
-.shows__boxes--show h3 {
-  font-size: 0.66rem;
-  font-weight: 500;
-  color: #AFAFAF;
-  margin: 0;
-  margin-top: 0.6rem;
-  padding-bottom: 0.2rem;
-}
-.shows__boxes--show time {
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-size: 0.813rem;
-}
-@media (min-width: 768px) {
-  .shows__boxes--show time {
-    padding: 1.5rem 0rem;
-  }
-}
 .shows__boxes--show p {
   font-size: 0.813rem;
   line-height: 1.125rem;
@@ -654,6 +691,8 @@ body a {
 @media (min-width: 768px) {
   .shows__boxes--show p {
     padding: 1.5rem 0rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 .shows__boxes--show button {

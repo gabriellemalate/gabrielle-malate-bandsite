@@ -46,8 +46,9 @@
                 @include row;
                 justify-content: flex-end;
             }
+        }
 
-        & iframe {
+        &--frame {
             height: 28vw;
             max-height: 15vh;
             border-radius: 4px;
@@ -64,38 +65,37 @@
         }
     }
 
-        &--text {
+    &__text {
 
-            & h1 {
-                padding: 1rem 0rem;
-                color: $white;
-                @include mobile-header;
-                width: 90%;
-    
-                @include tablet {
-                    @include page-header--tablet;
-                    padding: .8rem 0;
-                    max-width: 40rem;
-                }
-    
-                @include desktop {
-                    width: 40vw;
-                    max-width: 60rem;
-                }
+        &--big {
+            padding: 1rem 0rem;
+            color: $white;
+            @include mobile-header;
+            width: 90%;
+
+            @include tablet {
+                @include page-header--tablet;
+                padding: .8rem 0;
+                max-width: 40rem;
             }
-    
-            & h2 {
-                color: $white;
-                @include mobile-sub;
-                font-weight: 300;
-                margin: 0;
-                margin-top: 1.8rem;
-    
-                @include tablet {
-                    @include mobile-header;
-                    font-weight: 500;
-                    padding-top: 2.6rem;
-                }
+
+            @include desktop {
+                width: 40vw;
+                max-width: 60rem;
+            }
+        }
+
+        &--sub {
+            color: $white;
+            @include mobile-sub;
+            font-weight: 300;
+            margin: 0;
+            margin-top: 1.8rem;
+
+            @include tablet {
+                @include mobile-header;
+                font-weight: 500;
+                padding-top: 2.6rem;
             }
         }
     }
@@ -123,7 +123,7 @@
             margin: 2.4rem 0 1.6rem;
         }
 
-        & h2 {
+        &--heading {
             margin: 1.6rem 0 1rem;
 
             @include tablet {
@@ -135,32 +135,7 @@
                 margin-top: .6rem;
             }
         }
-
-        /*& hr {
-            stroke-width: 1px $mercury;
-            width: 110%;
-            position: relative;
-            right: 1rem;
-
-            @include tablet {
-                width: 100%;
-                position: static;
-                margin: 0;
-            }
-        }*/
-
-        & hr {
-            display: none;
-        }
     } 
-
-    &__gone {
-        @include shows-h3;
-
-        @include tablet {
-            display: none;
-        }
-    }
 
     &__invisible-row {
         display: none;
@@ -195,7 +170,7 @@
             }
         }
 
-        & h3 {
+        &--label {
             @include shows-h3;
 
             @include tablet {
@@ -205,7 +180,7 @@
             }
         }
 
-        & p, & strong {
+        &--accessibility-label {
             color: $white;
             margin: 0;
         }
@@ -235,12 +210,8 @@
         }
     }
 
-    &__boxes{
+    &__container{
         width: 100%;
-
-        @include tablet {
-            border-bottom: 1px solid $mercury;
-        }
 
         @include desktop {
             width: 75%;
@@ -251,67 +222,76 @@
                 @include column;
             }
         }
+    }
 
-        &--show {
-            padding-top: .1rem;
+    &__show {
+        padding-top: .1rem;
 
-            &:hover {
-                background-color: $alabaster;
+        &:hover {
+            background-color: $alabaster;
+        }
+
+        &:active {
+            background-color: $mercury;
+        }
+
+        @include tablet {
+            @include row;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            text-align: start;
+            border-bottom: 1px solid $mercury;
+        }
+
+        &--gone {
+            @include shows-h3;
+    
+            @include tablet {
+                display: none;
             }
+        }
 
-            &:active {
-                background-color: $mercury;
-            }
+        &--date {
+            @include mobile-sub;
+            font-size: .813rem;
 
             @include tablet {
-                @include row;
-                width: 100%;
-                align-items: center;
-                justify-content: space-between;
-                text-align: start;
+                font-size: .875rem;
             }
+        }
 
-            & time {
-                @include mobile-sub;
-                font-size: .813rem;
+        &--par {
+            @include mobile-par;
+            margin: 0;
+            padding-bottom: .2rem;
+            padding-top: .2rem;
 
-                @include tablet {
-                    font-size: .875rem;
-                }
+            @include tablet {
+                padding: 1.5rem 0rem;
+                @include body-tab;
             }
+        }
 
-            & p {
-                @include mobile-par;
+        & button {
+            width: 100%;
+            background-color: $bandsite__black;
+            color: $white;
+            border-radius: 4px;
+            height: 2.5rem;
+            margin-top: 1rem;
+            border: 0;
+            font-weight: 500;
+            font-size: $sub-mob;
+            margin-bottom: .4rem;
+
+            @include tablet {
+                width: 10rem;
                 margin: 0;
-                padding-bottom: .2rem;
-                padding-top: .2rem;
-
-                @include tablet {
-                    padding: 1.5rem 0rem;
-                    @include body-tab;
-                }
             }
 
-            & button {
-                width: 100%;
-                background-color: $bandsite__black;
-                color: $white;
-                border-radius: 4px;
-                height: 2.5rem;
-                margin-top: 1rem;
-                border: 0;
-                font-weight: 500;
-                font-size: $sub-mob;
-                margin-bottom: .4rem;
-
-                @include tablet {
-                    width: 10rem;
-                    margin: 0;
-                }
-
-                @include desktop {
-                    width: 9.4rem;
-                }
+            @include desktop {
+                width: 9.4rem;
             }
         }
     }

@@ -115,7 +115,6 @@ function generateCommentsSection() {
         oldCommentDiv.appendChild(textDiv);
 
         oldCommentArticle.appendChild(oldCommentDiv);
-
         commentsBoxesDiv.appendChild(oldCommentArticle);
 
         addHorizontalLine();
@@ -123,9 +122,7 @@ function generateCommentsSection() {
 
     commentsAllDiv.appendChild(h2);
     commentsAllDiv.appendChild(commentsBoxesDiv);
-
     commentsSection.appendChild(commentsAllDiv);
-
     commentsContainer.appendChild(commentsSection);
 }
 

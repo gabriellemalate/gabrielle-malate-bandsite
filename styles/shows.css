@@ -124,7 +124,7 @@ body a {
 .nav-bar__items--right {
   width: 50%;
   transition: 0.5s;
-  color: #AFAFAF;
+  color: #E1E1E1;
   border-bottom: 0.2rem solid #FFFFFF;
   padding-bottom: 0.6rem;
   width: 50%;
@@ -456,24 +456,24 @@ body a {
     justify-content: flex-end;
   }
 }
-.hero__align--sc iframe {
+.hero__align--frame {
   height: 28vw;
   max-height: 15vh;
   border-radius: 4px;
   width: 100%;
 }
 @media (min-width: 768px) {
-  .hero__align--sc iframe {
+  .hero__align--frame {
     width: 62%;
     margin-top: 2.2rem;
   }
 }
 @media (min-width: 1280px) {
-  .hero__align--sc iframe {
+  .hero__align--frame {
     width: 32vw;
   }
 }
-.hero__align--text h1 {
+.hero__text--big {
   padding: 1rem 0rem;
   color: #FFFFFF;
   font-size: 1.5rem;
@@ -484,7 +484,7 @@ body a {
   width: 90%;
 }
 @media (min-width: 768px) {
-  .hero__align--text h1 {
+  .hero__text--big {
     font-size: 3.75rem;
     line-height: 4.25rem;
     padding: 0.8rem 0;
@@ -492,12 +492,12 @@ body a {
   }
 }
 @media (min-width: 1280px) {
-  .hero__align--text h1 {
+  .hero__text--big {
     width: 40vw;
     max-width: 60rem;
   }
 }
-.hero__align--text h2 {
+.hero__text--sub {
   color: #FFFFFF;
   font-weight: 600;
   font-size: 0.875rem;
@@ -507,7 +507,7 @@ body a {
   margin-top: 1.8rem;
 }
 @media (min-width: 768px) {
-  .hero__align--text h2 {
+  .hero__text--sub {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
@@ -531,18 +531,6 @@ body a {
   align-items: flex-start;
   width: 90%;
   padding-bottom: 0.4rem;
-  /*& hr {
-      stroke-width: 1px $mercury;
-      width: 110%;
-      position: relative;
-      right: 1rem;
-
-      @include tablet {
-          width: 100%;
-          position: static;
-          margin: 0;
-      }
-  }*/
 }
 @media (min-width: 768px) {
   .shows__all {
@@ -560,11 +548,11 @@ body a {
     margin: 2.4rem 0 1.6rem;
   }
 }
-.shows__all h2 {
+.shows__all--heading {
   margin: 1.6rem 0 1rem;
 }
 @media (min-width: 768px) {
-  .shows__all h2 {
+  .shows__all--heading {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
@@ -572,24 +560,8 @@ body a {
   }
 }
 @media (min-width: 1280px) {
-  .shows__all h2 {
+  .shows__all--heading {
     margin-top: 0.6rem;
-  }
-}
-.shows__all hr {
-  display: none;
-}
-.shows__gone {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #AFAFAF;
-  margin: 0;
-  margin-top: 0.6rem;
-  padding-bottom: 0.2rem;
-}
-@media (min-width: 768px) {
-  .shows__gone {
-    display: none;
   }
 }
 .shows__invisible-row {
@@ -632,7 +604,7 @@ body a {
     width: 52%;
   }
 }
-.shows__invisible-row h3 {
+.shows__invisible-row--label {
   font-size: 0.75rem;
   font-weight: 600;
   color: #AFAFAF;
@@ -641,13 +613,13 @@ body a {
   padding-bottom: 0.2rem;
 }
 @media (min-width: 768px) {
-  .shows__invisible-row h3 {
+  .shows__invisible-row--label {
     margin-top: 1.7rem;
     padding-bottom: 0;
     font-size: 0.75rem;
   }
 }
-.shows__invisible-row p, .shows__invisible-row strong {
+.shows__invisible-row--accessibility-label {
   color: #FFFFFF;
   margin: 0;
 }
@@ -679,37 +651,32 @@ body a {
     width: 52%;
   }
 }
-.shows__boxes {
+.shows__container {
   width: 100%;
 }
-@media (min-width: 768px) {
-  .shows__boxes {
-    border-bottom: 1px solid #E1E1E1;
-  }
-}
 @media (min-width: 1280px) {
-  .shows__boxes {
+  .shows__container {
     width: 75%;
   }
 }
 @media (min-width: 768px) {
-  .shows__boxes--first {
+  .shows__container--first {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-.shows__boxes--show {
+.shows__show {
   padding-top: 0.1rem;
 }
-.shows__boxes--show:hover {
+.shows__show:hover {
   background-color: #FAFAFA;
 }
-.shows__boxes--show:active {
+.shows__show:active {
   background-color: #E1E1E1;
 }
 @media (min-width: 768px) {
-  .shows__boxes--show {
+  .shows__show {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -717,20 +684,34 @@ body a {
     align-items: center;
     justify-content: space-between;
     text-align: start;
+    border-bottom: 1px solid #E1E1E1;
   }
 }
-.shows__boxes--show time {
+.shows__show--gone {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #AFAFAF;
+  margin: 0;
+  margin-top: 0.6rem;
+  padding-bottom: 0.2rem;
+}
+@media (min-width: 768px) {
+  .shows__show--gone {
+    display: none;
+  }
+}
+.shows__show--date {
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-size: 0.813rem;
 }
 @media (min-width: 768px) {
-  .shows__boxes--show time {
+  .shows__show--date {
     font-size: 0.875rem;
   }
 }
-.shows__boxes--show p {
+.shows__show--par {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -739,13 +720,13 @@ body a {
   padding-top: 0.2rem;
 }
 @media (min-width: 768px) {
-  .shows__boxes--show p {
+  .shows__show--par {
     padding: 1.5rem 0rem;
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
-.shows__boxes--show button {
+.shows__show button {
   width: 100%;
   background-color: #323232;
   color: #FFFFFF;
@@ -758,13 +739,13 @@ body a {
   margin-bottom: 0.4rem;
 }
 @media (min-width: 768px) {
-  .shows__boxes--show button {
+  .shows__show button {
     width: 10rem;
     margin: 0;
   }
 }
 @media (min-width: 1280px) {
-  .shows__boxes--show button {
+  .shows__show button {
     width: 9.4rem;
   }
 }/*# sourceMappingURL=shows.css.map */

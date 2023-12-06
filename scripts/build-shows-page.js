@@ -1,67 +1,62 @@
-    // Function that generates the shows section
-    function generateShowsSection() {
-        const showsContainer = document.getElementById('showsContainer');
+const showsData = [
+    { date: "2021-09-06", venue: "Ronald Lane", location: "San Francisco, CA" },
+    { date: "2021-09-21", venue: "Pier 3 East", location: "San Francisco, CA" },
+    { date: "2021-10-15", venue: "View Lounge", location: "San Francisco, CA" },
+    { date: "2021-11-06", venue: "Hyatt Agency", location: "San Francisco, CA" },
+    { date: "2021-11-26", venue: "Moscow Center", location: "San Francisco, CA" },
+    { date: "2021-12-15", venue: "Press Club", location: "San Francisco, CA" },
+];
 
-        const showsData = [
-            { date: '2021-09-06', venue: 'Ronald Lane', location: 'San Francisco, CA' },
-            { date: '2021-09-21', venue: 'Pier 3 East', location: 'San Francisco, CA' },
-            { date: '2021-10-15', venue: 'View Lounge', location: 'San Francisco, CA' },
-            { date: '2021-11-06', venue: 'Hyatt Agency', location: 'San Francisco, CA' },
-            { date: '2021-11-26', venue: 'Moscow Center', location: 'San Francisco, CA' },
-            { date: '2021-12-15', venue: 'Press Club', location: 'San Francisco, CA' }
-        ];
+// Function to create a show element
+function createShowElement(show) {
+    const showElement = document.createElement("article");
+    showElement.className = "shows__show";
 
-        const showsSection = document.createElement('section');
-        showsSection.classList.add('shows');
+    showElement.innerHTML = `
+    <div class="shows__eq">
+        <h3 class="shows__gone">DATE</h3>
+        <time class="shows__show--date" datetime="${show.date}">${new Date(
+        show.date
+    ).toDateString()}</time>
 
-        const showsAllDiv = document.createElement('div');
-        showsAllDiv.classList.add('shows__all');
+        <div class="shows__eq--venlo">
+        <h3 class="shows__gone">VENUE</h3>
+        <p class="shows__show--par">${show.venue}</p>
+        <h3 class="shows__gone">LOCATION</h3>
+        <p class="shows__show--par">${show.location}</p>
+        </div>
+    </div>
 
-        const h2 = document.createElement('h2');
-        h2.textContent = 'Shows';
+    <button><a href="" title="only few left! buy now!">BUY TICKETS</a></button>
+    `;
+    return showElement;
+}
 
-        const showsBoxesDiv = document.createElement('div');
-        showsBoxesDiv.classList.add('shows__boxes');
+// Function to append show elements to the shows container
+function appendShowsToContainer(shows) {
+    const showsContainer = document.querySelector(".shows__container");
 
-        showsData.forEach(show => {
-            const showArticle = document.createElement('article');
-            showArticle.classList.add('shows__boxes--show');
+    shows.forEach((show) => {
+        const showElement = createShowElement(show);
+        showsContainer.appendChild(showElement);
+    });
+}
 
-            const showDate = document.createElement('time');
-            showDate.setAttribute('datetime', show.date);
-            showDate.textContent = new Date(show.date).toDateString();
+// Initialization
+document.addEventListener("DOMContentLoaded", () => {
+    const showsContainer = document.querySelector(".shows");
 
-            const venueParagraph = document.createElement('p');
-            venueParagraph.textContent = show.venue;
+    // Create heading
+    const heading = document.createElement("h2");
+    heading.className = "shows__all--heading";
+    heading.textContent = "Shows";
+    showsContainer.appendChild(heading);
 
-            const locationParagraph = document.createElement('p');
-            locationParagraph.innerHTML = `San Francisco, CA`;
+    // Create container
+    const container = document.createElement("div");
+    container.className = "shows__container";
+    showsContainer.appendChild(container);
 
-            const buyTicketsButton = document.createElement('button');
-            const buyTicketsLink = document.createElement('a');
-            buyTicketsLink.setAttribute('href', '');
-            buyTicketsLink.setAttribute('title', 'only few left! buy now!');
-            buyTicketsLink.textContent = 'BUY TICKETS';
-            buyTicketsButton.appendChild(buyTicketsLink);
-
-            showArticle.appendChild(showDate);
-            showArticle.appendChild(venueParagraph);
-            showArticle.appendChild(locationParagraph);
-            showArticle.appendChild(buyTicketsButton);
-
-            showsBoxesDiv.appendChild(showArticle);
-
-            // Add a horizontal line after each show
-            const hr = document.createElement('hr');
-            showsBoxesDiv.appendChild(hr);
-        });
-
-        showsAllDiv.appendChild(h2);
-        showsAllDiv.appendChild(showsBoxesDiv);
-        showsSection.appendChild(showsAllDiv);
-
-        showsContainer.appendChild(showsSection);
-    }
-
-    // Call the function to generate the shows section
-    generateShowsSection();
+    // Append shows to the container
+    appendShowsToContainer(showsData);
+});

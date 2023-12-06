@@ -136,7 +136,7 @@
             }
         }
 
-        & hr {
+        /*& hr {
             stroke-width: 1px $mercury;
             width: 110%;
             position: relative;
@@ -147,6 +147,10 @@
                 position: static;
                 margin: 0;
             }
+        }*/
+
+        & hr {
+            display: none;
         }
     } 
 
@@ -233,6 +237,10 @@
 
     &__boxes{
         width: 100%;
+
+        @include tablet {
+            border-bottom: 1px solid $mercury;
+        }
 
         @include desktop {
             width: 75%;

@@ -71,7 +71,7 @@ body a {
   color: #E1E1E1;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04rem;
   margin: 0;
   font-weight: lighter;
@@ -223,7 +223,7 @@ body a {
 .footer h2 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04rem;
   margin: 0;
   padding: 0;
@@ -418,7 +418,7 @@ body a {
   }
 }
 .hero__overlay {
-  background: rgba(40, 40, 40, 0.5);
+  background: rgba(51, 51, 51, 0.5);
   width: 100%;
   height: 100%;
   display: flex;
@@ -478,7 +478,7 @@ body a {
   color: #FFFFFF;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04rem;
   margin: 0;
   width: 90%;
@@ -510,7 +510,7 @@ body a {
   .hero__align--text h2 {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.04rem;
     margin: 0;
     font-weight: 500;
@@ -531,6 +531,18 @@ body a {
   align-items: flex-start;
   width: 90%;
   padding-bottom: 0.4rem;
+  /*& hr {
+      stroke-width: 1px $mercury;
+      width: 110%;
+      position: relative;
+      right: 1rem;
+
+      @include tablet {
+          width: 100%;
+          position: static;
+          margin: 0;
+      }
+  }*/
 }
 @media (min-width: 768px) {
   .shows__all {
@@ -565,21 +577,11 @@ body a {
   }
 }
 .shows__all hr {
-  stroke-width: 1px #E1E1E1;
-  width: 110%;
-  position: relative;
-  right: 1rem;
-}
-@media (min-width: 768px) {
-  .shows__all hr {
-    width: 100%;
-    position: static;
-    margin: 0;
-  }
+  display: none;
 }
 .shows__gone {
-  font-size: 0.66rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: #AFAFAF;
   margin: 0;
   margin-top: 0.6rem;
@@ -631,8 +633,8 @@ body a {
   }
 }
 .shows__invisible-row h3 {
-  font-size: 0.66rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: #AFAFAF;
   margin: 0;
   margin-top: 0.6rem;
@@ -679,6 +681,11 @@ body a {
 }
 .shows__boxes {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .shows__boxes {
+    border-bottom: 1px solid #E1E1E1;
+  }
 }
 @media (min-width: 1280px) {
   .shows__boxes {

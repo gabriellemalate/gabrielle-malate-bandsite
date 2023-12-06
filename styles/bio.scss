@@ -31,7 +31,7 @@
                 }
 
                 @include desktop {
-                    margin-left: 8rem;
+                    margin-left: 4rem;
                     font-size: 3.8rem;
                 }
             }
@@ -379,16 +379,28 @@
             width: 98%;
             border-radius: 4px;
             background-color: $alabaster;
+            padding-left: 1rem;
 
             &::placeholder {
                 color: $bandsite__black;
                 font-weight: lighter;
                 letter-spacing: 0.04rem;
-                padding-left: 4%;
+            }
+        }
 
-                @include tablet {
-                    padding-left: 2.6%;
-                }
+        & textarea {
+            border: $mercury 0.1rem solid;
+            width: 98%;
+            border-radius: 4px;
+            background-color: $alabaster;
+            font-family: avenir;
+            padding-left: 1rem;
+
+            &::placeholder {
+                color: $bandsite__black;
+                letter-spacing: 0.04rem;
+                font-family: avenir;
+                font-weight: 400;
             }
         }
 
@@ -424,17 +436,14 @@
         }
 
         &--name {
-            height: 2.25rem;
+            height: 2rem;
             margin-bottom: 1.2rem;
+            padding-top: 1rem;
         }
 
         &--comment {
             height: 6rem;
-
-            &::placeholder {
-                position: relative;
-                bottom: 1.4rem;
-            }
+            padding-top: 1rem;
         }
     }
 

@@ -27,7 +27,7 @@
 
 @mixin current-page--mobile {
     border-bottom: 0.2rem solid $white;
-    padding-bottom: .6rem;
+    padding-bottom: 0.6rem;
     width: 50%;
     font-weight: 500;
 }
@@ -46,7 +46,7 @@
 }
 
 @mixin hero-overlay {
-    background: rgba(40, 40, 40, 0.5); //this is bandsite black at half opacity via rgba
+    background: rgb(51, 51, 51, .5);
     width: 100%;
     height: 100%;
 }
@@ -54,7 +54,7 @@
 @mixin mobile-header {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.04rem;
     margin: 0;
 }
@@ -62,7 +62,7 @@
 @mixin mobile-sub {
     font-weight: 600;
     font-size: $sub-mob;
-    line-height: 1.375rem;;
+    line-height: 1.375rem;
 }
 
 @mixin mobile-par {
@@ -88,10 +88,10 @@
 }
 
 @mixin shows-h3 {
-    font-size: .66rem;
-                font-weight: 500;
-                color: $silver;
-                margin: 0;
-                margin-top: .6rem;
-                padding-bottom: .2rem;
+    font-size: 0.75rem;
+    font-weight: 600; //700 from styleguide is too thick. TA advised this comment is fine & that 500 is not acceptable.
+    color: $silver;
+    margin: 0;
+    margin-top: 0.6rem;
+    padding-bottom: 0.2rem;
 }

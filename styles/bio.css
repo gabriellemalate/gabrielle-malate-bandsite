@@ -71,7 +71,7 @@ body a {
   color: #E1E1E1;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04rem;
   margin: 0;
   font-weight: lighter;
@@ -223,7 +223,7 @@ body a {
 .footer h2 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04rem;
   margin: 0;
   padding: 0;
@@ -409,7 +409,7 @@ body a {
   height: 58vw;
 }
 .hero__overlay {
-  background: rgba(40, 40, 40, 0.5);
+  background: rgba(51, 51, 51, 0.5);
   width: 100%;
   height: 100%;
   display: flex;
@@ -428,7 +428,7 @@ body a {
   color: #FFFFFF;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04rem;
   margin: 0;
 }
@@ -442,7 +442,7 @@ body a {
 }
 @media (min-width: 1280px) {
   .hero__overlay--align h1 {
-    margin-left: 8rem;
+    margin-left: 4rem;
     font-size: 3.8rem;
   }
 }
@@ -549,7 +549,7 @@ body a {
 .about__heading--musicians {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04rem;
   margin: 0;
   margin-top: 1.2rem;
@@ -708,7 +708,7 @@ body a {
 .gallery__eq h2 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04rem;
   margin: 0;
   padding-top: 1.2rem;
@@ -851,26 +851,37 @@ body a {
   width: 98%;
   border-radius: 4px;
   background-color: #FAFAFA;
+  padding-left: 1rem;
 }
 .comment__new input::-moz-placeholder {
   color: #323232;
   font-weight: lighter;
   letter-spacing: 0.04rem;
-  padding-left: 4%;
 }
 .comment__new input::placeholder {
   color: #323232;
   font-weight: lighter;
   letter-spacing: 0.04rem;
-  padding-left: 4%;
 }
-@media (min-width: 768px) {
-  .comment__new input::-moz-placeholder {
-    padding-left: 2.6%;
-  }
-  .comment__new input::placeholder {
-    padding-left: 2.6%;
-  }
+.comment__new textarea {
+  border: #E1E1E1 0.1rem solid;
+  width: 98%;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+  font-family: avenir;
+  padding-left: 1rem;
+}
+.comment__new textarea::-moz-placeholder {
+  color: #323232;
+  letter-spacing: 0.04rem;
+  font-family: avenir;
+  font-weight: 400;
+}
+.comment__new textarea::placeholder {
+  color: #323232;
+  letter-spacing: 0.04rem;
+  font-family: avenir;
+  font-weight: 400;
 }
 .comment__new h4 {
   color: #AFAFAF;
@@ -902,19 +913,13 @@ body a {
   }
 }
 .comment__new--name {
-  height: 2.25rem;
+  height: 2rem;
   margin-bottom: 1.2rem;
+  padding-top: 1rem;
 }
 .comment__new--comment {
   height: 6rem;
-}
-.comment__new--comment::-moz-placeholder {
-  position: relative;
-  bottom: 1.4rem;
-}
-.comment__new--comment::placeholder {
-  position: relative;
-  bottom: 1.4rem;
+  padding-top: 1rem;
 }
 .comment__entirely {
   display: flex;

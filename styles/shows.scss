@@ -224,6 +224,14 @@
         }
     }
 
+    &__gone {
+        @include shows-h3;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
     &__show {
         padding-top: .1rem;
 
@@ -242,14 +250,6 @@
             justify-content: space-between;
             text-align: start;
             border-bottom: 1px solid $mercury;
-        }
-
-        &--gone {
-            @include shows-h3;
-    
-            @include tablet {
-                display: none;
-            }
         }
 
         &--date {
@@ -273,7 +273,7 @@
             }
         }
 
-        & button {
+        &--button {
             width: 100%;
             background-color: $bandsite__black;
             color: $white;

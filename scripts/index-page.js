@@ -1,4 +1,3 @@
-
 // Function that generates the comments section
 function generateCommentsSection() {
     const commentsContainer = document.getElementById('commentsContainer');
@@ -35,8 +34,10 @@ function generateCommentsSection() {
 
     const newCommentForm = document.createElement('form');
     newCommentForm.classList.add('comment__entirely--text');
-    newCommentForm.setAttribute('action', 'post_comment.php');
-    newCommentForm.setAttribute('method', 'post');
+    newCommentForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        postComment(newCommentForm);
+    });
 
     const nameLabel = document.createElement('h4');
     nameLabel.textContent = 'NAME';
@@ -70,13 +71,66 @@ function generateCommentsSection() {
     newCommentDiv.appendChild(newCommentForm);
     newCommentArticle.appendChild(newCommentDiv);
 
-    commentsBoxesDiv.appendChild(newCommentArticle);
+    commentsBoxesDiv.appendChild(newCommentArticle, commentsBoxesDiv.firstChild);
 
     // Add horizontal line after each comment
     const addHorizontalLine = () => {
         const hr = document.createElement('hr');
         commentsBoxesDiv.appendChild(hr);
     };
+
+    function postComment(form) {
+        const nameInput = form.querySelector('.comment__new--name');
+        const commentInput = form.querySelector('.comment__new--comment');
+
+        // Get the current date
+        const currentDate = new Date().toLocaleDateString();
+
+        // Create a new comment article
+        const newCommentArticle = document.createElement('article');
+        newCommentArticle.classList.add('comment__old');
+
+        const newCommentDiv = document.createElement('div');
+        newCommentDiv.classList.add('comment__entirely');
+
+        const newCommentImg = document.createElement('img');
+        newCommentImg.setAttribute('src', './assets/Images/empty-image.png');
+        newCommentImg.setAttribute('alt', `${nameInput.value}'s Photo`);
+
+        const newTextDiv = document.createElement('div');
+        newTextDiv.classList.add('comment__entirely--text');
+
+        const newTopDiv = document.createElement('div');
+        newTopDiv.classList.add('comment__old--top');
+
+        const newNameH3 = document.createElement('h3');
+        newNameH3.textContent = nameInput.value;
+
+        const newDateElement = document.createElement('time');
+        newDateElement.setAttribute('datetime', currentDate);
+        newDateElement.textContent = currentDate;
+
+        const newCommentP = document.createElement('p');
+        newCommentP.textContent = commentInput.value;
+
+        newTopDiv.appendChild(newNameH3);
+        newTopDiv.appendChild(newDateElement);
+
+        newTextDiv.appendChild(newTopDiv);
+        newTextDiv.appendChild(newCommentP);
+
+        newCommentDiv.appendChild(newCommentImg);
+        newCommentDiv.appendChild(newTextDiv);
+
+        newCommentArticle.appendChild(newCommentDiv);
+        commentsBoxesDiv.insertBefore(newCommentArticle, commentsBoxesDiv.secondChild);
+
+        // Clear the input fields
+        nameInput.value = '';
+        commentInput.value = '';
+
+        addHorizontalLine();
+    }
 
     commentsData.forEach(comment => {
         const oldCommentArticle = document.createElement('article');
@@ -128,3 +182,6 @@ function generateCommentsSection() {
 
 // Call the function to generate the comments section
 generateCommentsSection();
+
+
+//---------------

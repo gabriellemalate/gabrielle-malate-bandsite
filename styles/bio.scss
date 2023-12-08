@@ -355,7 +355,6 @@
             & h3 {
                 margin: 0.2rem 0;
                 @include mobile-sub;
-                font-weight: 500;
                 color: $bandsite__black;
             }
 
@@ -369,6 +368,10 @@
 
     &__new {
         width: 100%;
+
+        &-posted {
+            width: 100%;
+        }
 
         &--img {
             margin-top: 1.2rem;

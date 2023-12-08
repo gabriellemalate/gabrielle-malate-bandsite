@@ -830,7 +830,6 @@ body a {
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 500;
   color: #323232;
 }
 .comment__old--top time {
@@ -841,6 +840,9 @@ body a {
   font-weight: lighter;
 }
 .comment__new {
+  width: 100%;
+}
+.comment__new-posted {
   width: 100%;
 }
 .comment__new--img {

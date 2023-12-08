@@ -71,7 +71,7 @@ function generateCommentsSection() {
     newCommentDiv.appendChild(newCommentForm);
     newCommentArticle.appendChild(newCommentDiv);
 
-    commentsBoxesDiv.appendChild(newCommentArticle, commentsBoxesDiv.firstChild);
+    commentsBoxesDiv.appendChild(newCommentArticle);
 
     // Add horizontal line after each comment
     const addHorizontalLine = () => {
@@ -123,7 +123,7 @@ function generateCommentsSection() {
         newCommentDiv.appendChild(newTextDiv);
 
         newCommentArticle.appendChild(newCommentDiv);
-        commentsBoxesDiv.insertBefore(newCommentArticle, commentsBoxesDiv.secondChild);
+        commentsBoxesDiv.insertBefore(newCommentArticle, newCommentArticle.nextSibling);
 
         // Clear the input fields
         nameInput.value = '';
@@ -182,6 +182,3 @@ function generateCommentsSection() {
 
 // Call the function to generate the comments section
 generateCommentsSection();
-
-
-//---------------

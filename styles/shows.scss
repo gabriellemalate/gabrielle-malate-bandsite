@@ -146,6 +146,10 @@
             justify-content: space-between;
         }
 
+        @include desktop {
+            padding-bottom: 1.4rem;
+        }
+
         &--eq {
             @include tablet {
                 @include row;
@@ -177,6 +181,12 @@
                 margin-top: 1.7rem;
                 padding-bottom: 0;
                 font-size: .75rem;
+            }
+
+            &:last-child {
+                @include tablet{
+                    padding-right: 3.6rem;
+                }
             }
         }
 

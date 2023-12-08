@@ -576,6 +576,11 @@ body a {
     justify-content: space-between;
   }
 }
+@media (min-width: 1280px) {
+  .shows__invisible-row {
+    padding-bottom: 1.4rem;
+  }
+}
 @media (min-width: 768px) {
   .shows__invisible-row--eq {
     display: flex;
@@ -617,6 +622,11 @@ body a {
     margin-top: 1.7rem;
     padding-bottom: 0;
     font-size: 0.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .shows__invisible-row--label:last-child {
+    padding-right: 3.6rem;
   }
 }
 .shows__invisible-row--accessibility-label {

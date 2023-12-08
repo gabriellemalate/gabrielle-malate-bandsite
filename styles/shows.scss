@@ -41,7 +41,7 @@
             margin-top: 9.12rem;
         }
 
-        &--sc{
+        &--sc {
             @include desktop {
                 @include row;
                 justify-content: flex-end;
@@ -66,7 +66,6 @@
     }
 
     &__text {
-
         &--big {
             padding: 1rem 0rem;
             color: $white;
@@ -75,7 +74,7 @@
 
             @include tablet {
                 @include page-header--tablet;
-                padding: .8rem 0;
+                padding: 0.8rem 0;
                 max-width: 40rem;
             }
 
@@ -109,7 +108,7 @@
         @include column;
         align-items: flex-start;
         width: 90%;
-        padding-bottom: .4rem;
+        padding-bottom: 0.4rem;
 
         @include tablet {
             padding-bottom: 1.42rem;
@@ -128,14 +127,14 @@
 
             @include tablet {
                 @include section-header--tablet;
-                margin: 2.8rem 0 .8rem;
+                margin: 2.8rem 0 0.8rem;
             }
 
             @include desktop {
-                margin-top: .6rem;
+                margin-top: 0.6rem;
             }
         }
-    } 
+    }
 
     &__invisible-row {
         display: none;
@@ -180,11 +179,11 @@
             @include tablet {
                 margin-top: 1.7rem;
                 padding-bottom: 0;
-                font-size: .75rem;
+                font-size: 0.75rem;
             }
 
             &:last-child {
-                @include tablet{
+                @include tablet {
                     padding-right: 3.6rem;
                 }
             }
@@ -200,7 +199,7 @@
         @include tablet {
             @include row;
             justify-content: space-between;
-            width: 68%
+            width: 68%;
         }
 
         @include desktop {
@@ -220,7 +219,7 @@
         }
     }
 
-    &__container{
+    &__container {
         width: 100%;
 
         @include desktop {
@@ -243,7 +242,7 @@
     }
 
     &__show {
-        padding-top: .1rem;
+        padding-top: 0.1rem;
 
         &:hover {
             background-color: $alabaster;
@@ -264,18 +263,18 @@
 
         &--date {
             @include mobile-sub;
-            font-size: .813rem;
+            font-size: 0.813rem;
 
             @include tablet {
-                font-size: .875rem;
+                font-size: 0.875rem;
             }
         }
 
         &--par {
             @include mobile-par;
             margin: 0;
-            padding-bottom: .2rem;
-            padding-top: .2rem;
+            padding-bottom: 0.2rem;
+            padding-top: 0.2rem;
 
             @include tablet {
                 padding: 1.5rem 0rem;
@@ -293,7 +292,7 @@
             border: 0;
             font-weight: 500;
             font-size: $sub-mob;
-            margin-bottom: .4rem;
+            margin-bottom: 0.4rem;
 
             @include tablet {
                 width: 10rem;

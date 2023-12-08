@@ -4,7 +4,7 @@
 
 /* General */
 body {
-    font-family: avenir-next-regular, Arial, Helvetica, sans-serif;
+    font-family: avenirnextregular, avenir, Arial, Helvetica, sans-serif;
     margin: 0;
 
     header {
@@ -207,7 +207,7 @@ body {
             padding: 0;
             padding-top: 1.4rem;
             padding-bottom: 0.2rem;
-    
+
             @include tablet {
                 padding-top: 1rem;
                 @include section-header--tablet;
@@ -257,25 +257,25 @@ body {
 
         &--h4 {
             @include mobile-sub;
-    
+
             &:nth-child(even) {
                 margin-bottom: 1rem;
                 margin-top: 0;
-    
+
                 @include tablet {
                     margin-bottom: 1.4rem;
                 }
             }
-    
+
             &:nth-child(odd) {
                 margin-top: 1.2rem;
                 margin-bottom: 0;
-    
+
                 @include tablet {
                     margin-top: 0.8rem;
                 }
             }
-    
+
             @include tablet {
                 font-size: $bod-tab;
                 line-height: 1.25rem;
@@ -284,24 +284,24 @@ body {
 
         &--par {
             @include mobile-par;
-    
+
             @include tablet {
                 font-size: $bod-tab;
                 line-height: $foot-line;
             }
-    
+
             &:nth-child(even) {
                 margin-bottom: 0.8rem;
                 margin-top: 0;
-    
+
                 @include tablet {
                     padding-bottom: 0.6rem;
                 }
             }
-    
+
             &:nth-child(odd) {
                 margin-bottom: 0;
-    
+
                 @include tablet {
                     padding-left: 0;
                 }

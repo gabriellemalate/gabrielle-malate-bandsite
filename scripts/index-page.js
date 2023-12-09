@@ -1,67 +1,67 @@
-// Initialize old comments array
+// old comments array
 const oldComments = [
     { name: 'Connor Walton', date: '2021-02-17', comment: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.' },
     { name: 'Emilie Beach', date: '2021-01-09', comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.' },
     { name: 'Miles Acosta', date: '2020-12-20', comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough." }
 ];
 
-// Create comments section
+// comments section
 function generateCommentsSection() {
     const commentsContainer = document.getElementById('commentsContainer');
 
-    // Create main section
+    // main section
     const commentsSection = document.createElement('section');
     commentsSection.classList.add('comment');
 
-    // Create comment__all container
+    // comment__all container
     const commentsAllDiv = document.createElement('div');
     commentsAllDiv.classList.add('comment__all');
 
-    // Create heading
+    // heading
     const h2 = document.createElement('h2');
     h2.textContent = 'Join the Conversation';
 
-    // Create comment__all--boxes container
+    // comment__all--boxes container
     const commentsBoxesDiv = document.createElement('div');
     commentsBoxesDiv.classList.add('comment__all--boxes');
 
-    // Add new comment form
+    // new comment form
     const newCommentArticle = createNewCommentArticle();
 
-    // Add form to boxes container
+    // form to boxes container
     commentsBoxesDiv.appendChild(newCommentArticle);
 
-    // Add hr after the new comment form
+    // hr after the new comment form
     const hrAfterForm = document.createElement('hr');
     commentsBoxesDiv.appendChild(hrAfterForm);
 
-    // Add new-posted section
+    // new-posted section
     const newPostedSection = document.createElement('article');
     newPostedSection.classList.add('comment__new-posted');
     commentsBoxesDiv.appendChild(newPostedSection);
 
-    // Add old comments to boxes container
+    // old comments to boxes container
     oldComments.forEach(comment => {
         const oldCommentArticle = createOldCommentArticle(comment);
         commentsBoxesDiv.appendChild(oldCommentArticle);
 
-        // Add hr after each old comment
+        // hr after each old comment
         const hrAfterOldComment = document.createElement('hr');
         commentsBoxesDiv.appendChild(hrAfterOldComment);
     });
 
-    // Add heading and boxes container to comment__all container
+    // heading and boxes container to comment__all container
     commentsAllDiv.appendChild(h2);
     commentsAllDiv.appendChild(commentsBoxesDiv);
 
-    // Add comment__all container to main section
+    // comment__all container to main section
     commentsSection.appendChild(commentsAllDiv);
 
-    // Add main section to comments container
+    // main section to comments container
     commentsContainer.appendChild(commentsSection);
 }
 
-// Function to create the new comment form
+// new comment form
 function createNewCommentArticle() {
     const newCommentArticle = document.createElement('article');
     newCommentArticle.classList.add('comment__new');
@@ -116,7 +116,7 @@ function createNewCommentArticle() {
     return newCommentArticle;
 }
 
-// Function to create an old comment
+// create an old comment
 function createOldCommentArticle(comment) {
     const oldCommentArticle = document.createElement('article');
     oldCommentArticle.classList.add('comment__old');
@@ -158,12 +158,12 @@ function createOldCommentArticle(comment) {
     return oldCommentArticle;
 }
 
-// Function to handle posting new comments
+// posting new comments
 function postComment(form) {
     const nameInput = form.querySelector('.comment__new--name');
     const commentInput = form.querySelector('.comment__new--comment');
 
-    // Get the current date
+    // current date
     const currentDate = new Date().toLocaleDateString();
 
     // Create a new comment object
@@ -173,19 +173,18 @@ function postComment(form) {
         comment: commentInput.value
     };
 
-    // Add new comment to the new-posted section
+    // new comment to the new-posted section
     const newPostedSection = document.querySelector('.comment__new-posted');
     const newPostedCommentArticle = createOldCommentArticle(newComment);
     newPostedSection.insertBefore(newPostedCommentArticle, newPostedSection.firstChild);
 
-    // Add hr after each new posted comment
+    // hr after each new posted comment
     const hrAfterNewPostedComment = document.createElement('hr');
     newPostedSection.insertBefore(hrAfterNewPostedComment, newPostedSection.firstChild.nextSibling);
 
-    // Clear the input fields
+    // clear input fields
     nameInput.value = '';
     commentInput.value = '';
 }
 
-// Call the function to generate the comments section
 generateCommentsSection();

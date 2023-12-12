@@ -57,7 +57,7 @@ function generateShowsSection() {
 
     invisibleRowDiv.appendChild(invisibleRowEqDiv);
 
-    // Accessibility label for buy buttons
+    // accessibility label for buy buttons
     const accessibilityLabelP = document.createElement('p');
     accessibilityLabelP.classList.add('shows__invisible-row--accessibility-label');
     accessibilityLabelP.textContent = 'BUY BUTTONS';
@@ -128,14 +128,13 @@ function generateShowsSection() {
         showsContainerDiv.appendChild(showArticle);
     });
 
-    // Append elements to the shows section
+    // append elements to the shows section
     showsAllDiv.appendChild(h2);
     showsAllDiv.appendChild(showsContainerDiv);
     showsSection.appendChild(showsAllDiv);
 
-    // Append the shows section to the container
+    // append the shows section to the container
     showsContainer.appendChild(showsSection);
 }
 
-// Call the function to generate the shows section
 generateShowsSection();

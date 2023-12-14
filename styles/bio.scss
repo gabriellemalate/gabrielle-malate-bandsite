@@ -52,6 +52,7 @@
 .about {
     color: $bandsite__black;
     @include column;
+    background-color: $white;
 
     &__top-eq {
         @include column;
@@ -255,6 +256,8 @@
             @include mobile-header;
             padding-top: 1.2rem;
             margin-bottom: 0.8rem;
+            align-self: flex-start;
+            color: $bandsite__black;
 
             @include tablet {
                 @include section-header--tablet;
@@ -299,6 +302,7 @@
     @include column;
     align-items: center;
     padding-bottom: 0.4rem;
+    background-color: $white;
 
     &__all {
         @include column;
@@ -317,6 +321,7 @@
 
         & h2 {
             margin: 0.8rem 0;
+            color: $bandsite__black;
 
             @include tablet {
                 @include section-header--tablet;

@@ -1,6 +1,6 @@
 /* General */
 body {
-  font-family: avenirnextregular, avenir, Arial, Helvetica, sans-serif;
+  font-family: avenirnext, avenir, Arial, Helvetica, sans-serif;
   margin: 0;
 }
 body header {
@@ -463,6 +463,7 @@ body a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #FFFFFF;
 }
 .about__top-eq {
   display: flex;
@@ -713,6 +714,8 @@ body a {
   margin: 0;
   padding-top: 1.2rem;
   margin-bottom: 0.8rem;
+  align-self: flex-start;
+  color: #323232;
 }
 @media (min-width: 768px) {
   .gallery__eq--head {
@@ -763,6 +766,7 @@ body a {
   align-items: center;
   align-items: center;
   padding-bottom: 0.4rem;
+  background-color: #FFFFFF;
 }
 .comment__all {
   display: flex;
@@ -785,6 +789,7 @@ body a {
 }
 .comment__all h2 {
   margin: 0.8rem 0;
+  color: #323232;
 }
 @media (min-width: 768px) {
   .comment__all h2 {

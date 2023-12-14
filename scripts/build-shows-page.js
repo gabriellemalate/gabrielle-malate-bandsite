@@ -1,5 +1,6 @@
-function generateShowsSection() {
+async function generateShowsSection() {
     const showsContainer = document.getElementById('showsContainer');
+    //const bandSiteApi = new BandSiteApi(apiKey);
 
     const showsData = [
         { date: '2021-09-06', venue: 'Ronald Lane', location: 'San Francisco, CA', link: '#' },
@@ -9,6 +10,9 @@ function generateShowsSection() {
         { date: '2021-11-26', venue: 'Moscow Center', location: 'San Francisco, CA', link: '#' },
         { date: '2021-12-15', venue: 'Press Club', location: 'San Francisco, CA', link: '#' }
     ];
+
+    // try {
+    //     const showsData = await bandSiteApi.getShows();
 
     // shows section
     const showsSection = document.createElement('section');
@@ -136,5 +140,9 @@ function generateShowsSection() {
     // append the shows section to the container
     showsContainer.appendChild(showsSection);
 }
+// } catch (error) {
+//     console.error('Error fetching shows:', error);
+// }
+// }
 
 generateShowsSection();

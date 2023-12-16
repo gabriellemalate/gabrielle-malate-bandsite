@@ -1,12 +1,30 @@
-// old comments array
-const oldComments = [
-    { name: 'Connor Walton', date: '2021-02-17', comment: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.' },
-    { name: 'Emilie Beach', date: '2021-01-09', comment: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.' },
-    { name: 'Miles Acosta', date: '2020-12-20', comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough." }
-];
-
 // comments section
-function generateCommentsSection() {
+async function generateCommentsSection() {
+    const commentsContainer = document.getElementById('commentsContainer');
+
+    try {
+        // get old comments
+        const oldComments = await bandSiteApi.getComments();
+
+        // display old comments
+        oldComments.forEach(comment => {
+            const oldCommentArticle = createOldCommentArticle(comment);
+            commentsContainer.appendChild(oldCommentArticle);
+
+            // hr after each old comment
+            const hrAfterOldComment = document.createElement('hr');
+            commentsContainer.appendChild(hrAfterOldComment);
+        });
+    } catch (error) {
+        console.error('Error getting comments:', error);
+    }
+
+        // Create a section for new posted comments
+        const newPostedSection = document.createElement('section');
+        newPostedSection.classList.add('comment__new-posted');
+        commentsContainer.appendChild(newPostedSection);
+}
+
     const commentsContainer = document.getElementById('commentsContainer');
 
     // main section
@@ -38,17 +56,7 @@ function generateCommentsSection() {
     // new-posted section
     const newPostedSection = document.createElement('article');
     newPostedSection.classList.add('comment__new-posted');
-    commentsBoxesDiv.appendChild(newPostedSection);
-
-    // old comments to boxes container
-    oldComments.forEach(comment => {
-        const oldCommentArticle = createOldCommentArticle(comment);
-        commentsBoxesDiv.appendChild(oldCommentArticle);
-
-        // hr after each old comment
-        const hrAfterOldComment = document.createElement('hr');
-        commentsBoxesDiv.appendChild(hrAfterOldComment);
-    });
+    commentsBoxesDiv.appendChild(newPostedSection);;
 
     // heading and boxes container to comment__all container
     commentsAllDiv.appendChild(h2);
@@ -59,7 +67,7 @@ function generateCommentsSection() {
 
     // main section to comments container
     commentsContainer.appendChild(commentsSection);
-}
+
 
 // new comment form
 function createNewCommentArticle() {
@@ -76,9 +84,13 @@ function createNewCommentArticle() {
 
     const newCommentForm = document.createElement('form');
     newCommentForm.classList.add('comment__entirely--text');
+    newCommentForm.setAttribute('id', 'newCommentForm'); 
     newCommentForm.addEventListener('submit', function (event) {
         event.preventDefault();
         postComment(newCommentForm);
+    submitButton.addEventListener('submit', function (event) {
+        event.preventDefault();
+        postComment(newCommentForm);})
     });
 
     const nameLabel = document.createElement('h4');
@@ -138,8 +150,8 @@ function createOldCommentArticle(comment) {
     nameH3.textContent = comment.name;
 
     const dateElement = document.createElement('time');
-    dateElement.setAttribute('datetime', comment.date);
-    dateElement.textContent = new Date(comment.date).toLocaleDateString();
+    // dateElement.setAttribute('datetime', comment.date);
+    dateElement.textContent = new Date(comment.timestamp).toLocaleDateString();
 
     const commentP = document.createElement('p');
     commentP.textContent = comment.comment;
@@ -159,6 +171,7 @@ function createOldCommentArticle(comment) {
 }
 
 // posting new comments
+// Update the postComment function
 function postComment(form) {
     const nameInput = form.querySelector('.comment__new--name');
     const commentInput = form.querySelector('.comment__new--comment');
@@ -166,25 +179,36 @@ function postComment(form) {
     // current date
     const currentDate = new Date().toLocaleDateString();
 
-    // Create a new comment object
+    // create a new comment object
     const newComment = {
         name: nameInput.value,
         date: currentDate,
         comment: commentInput.value
     };
 
-    // new comment to the new-posted section
-    const newPostedSection = document.querySelector('.comment__new-posted');
-    const newPostedCommentArticle = createOldCommentArticle(newComment);
-    newPostedSection.insertBefore(newPostedCommentArticle, newPostedSection.firstChild);
+    // send the new comment to the server using the BandSiteApi class
+    bandSiteApi.postComment(newComment)
+        .then(postResponse => {
+            // Assuming api returns a response with the new comment details
+            // Display the new comment on the page
+            const newPostedSection = document.querySelector('.comment__new-posted');
+            const newPostedCommentArticle = createOldCommentArticle(postResponse);
+            newPostedSection.insertBefore(newPostedCommentArticle, newPostedSection.firstChild);
 
-    // hr after each new posted comment
-    const hrAfterNewPostedComment = document.createElement('hr');
-    newPostedSection.insertBefore(hrAfterNewPostedComment, newPostedSection.firstChild.nextSibling);
+            // hr after each new posted comment
+            const hrAfterNewPostedComment = document.createElement('hr');
+            newPostedSection.insertBefore(hrAfterNewPostedComment, newPostedSection.firstChild.nextSibling);
 
-    // clear input fields
-    nameInput.value = '';
-    commentInput.value = '';
+            // clear input fields
+            nameInput.value = '';
+            commentInput.value = '';
+        })
+        .catch(error => {
+            console.error('Error posting comment:', error);
+        });
 }
 
+
 generateCommentsSection();
+
+//add sort function after getting comments from api

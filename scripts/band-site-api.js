@@ -8,14 +8,13 @@ class BandSiteApi {
 
     async postComment(comment) {
         const url = `${this.apiUrl}comments?api_key=${this.apiKey}`;
-        const data = { content: comment };
-
-        console.log('Posting comment to:', url);
+        const data = { "name": comment.name,
+        "comment": comment.comment };
 
         try {
             const response = await axios.post(url, data);
             console.log('Post comment response:', response.data);
-            return response.data; 
+        return response.data;
         } catch (error) {
             console.error('Error posting comment:', error);
             throw error;
@@ -33,15 +32,31 @@ class BandSiteApi {
             throw error;
         }
     }
+
+        async getShows() {
+        const url = `${this.apiUrl}shows/?api_key=${this.apiKey}`;
+
+        try {
+            const response = await axios.get(url);
+            return response.data;
+        } catch (error) {
+            console.error('Error getting shows:', error);
+            throw error;
+        }
+    }
 }
 
 const bandSiteApi = new BandSiteApi(apiKey);
 
-// post a comment
-const commentToPost = 'This is a great website!';
-bandSiteApi.postComment(commentToPost)
-    .then(postResponse => console.log('Post Comment Response:', postResponse))
-    .catch(error => console.error('Error posting comment:', error));
+// // post a comment
+// const commentToPost = {
+//     name: nameInput.value,
+//     date: currentDate,
+//     comment: commentInput.value
+// };
+// bandSiteApi.postComment(commentToPost)
+//     .then(postResponse => console.log('Post Comment Response:', postResponse))
+//     .catch(error => console.error('Error posting comment:', error));
 
 // get comments
 bandSiteApi.getComments()
@@ -55,6 +70,7 @@ function postComment(form) {
     // current date
     const currentDate = new Date().toLocaleDateString();
 
+    //STUDY THIS 75-82
     // create a new comment object
     const newComment = {
         name: nameInput.value,

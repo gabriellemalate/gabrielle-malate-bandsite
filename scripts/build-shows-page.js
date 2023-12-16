@@ -10,10 +10,6 @@ async function generateShowsSection() {
         { date: '2021-11-26', venue: 'Moscow Center', location: 'San Francisco, CA', link: '#' },
         { date: '2021-12-15', venue: 'Press Club', location: 'San Francisco, CA', link: '#' }
     ];
-
-    // try {
-    //     const showsData = await bandSiteApi.getShows();
-
     // shows section
     const showsSection = document.createElement('section');
     showsSection.classList.add('shows');
@@ -140,9 +136,54 @@ async function generateShowsSection() {
     // append the shows section to the container
     showsContainer.appendChild(showsSection);
 }
-// } catch (error) {
-//     console.error('Error fetching shows:', error);
-// }
-// }
 
 generateShowsSection();
+
+// Create an instance of the BandSiteApi class
+const bandSiteApi = new BandSiteApi(apiKey);
+
+// Function to generate the show list
+async function generateShowList() {
+    const showListContainer = document.getElementById('showListContainer');
+
+    try {
+        // Get the list of shows from the API
+        const shows = await bandSiteApi.getShows();
+
+        // Loop through the shows and create HTML elements
+        shows.forEach(show => {
+            const showCard = createShowCard(show);
+            showListContainer.appendChild(showCard);
+        });
+    } catch (error) {
+        console.error('Error getting shows:', error);
+    }
+}
+
+// Function to create a show card
+function createShowCard(show) {
+    const showCard = document.createElement('div');
+    showCard.classList.add('show-card');
+
+    const dateElement = document.createElement('p');
+    dateElement.classList.add('show-date');
+    dateElement.textContent = new Date(show.date).toLocaleDateString();
+
+    const venueElement = document.createElement('p');
+    venueElement.classList.add('show-venue');
+    venueElement.textContent = show.place;
+
+    const locationElement = document.createElement('p');
+    locationElement.classList.add('show-location');
+    locationElement.textContent = show.location;
+
+    // Append elements to the show card
+    showCard.appendChild(dateElement);
+    showCard.appendChild(venueElement);
+    showCard.appendChild(locationElement);
+
+    return showCard;
+}
+
+// Invoke the function to generate the show list when the page loads
+window.addEventListener('DOMContentLoaded', generateShowList);

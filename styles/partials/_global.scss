@@ -188,7 +188,7 @@ body {
             justify-content: flex-start;
         }
 
-        &--row {
+        &-row {
             margin: 1rem 0;
             margin-bottom: 0;
 
@@ -202,7 +202,7 @@ body {
             }
         }
 
-        &--heading {
+        &-heading {
             @include mobile-header;
             padding: 0;
             padding-top: 1.4rem;
@@ -216,7 +216,7 @@ body {
             }
         }
 
-        &--img {
+        &-img {
             transition: 0.4s;
             margin-right: 1.6rem;
 
@@ -235,7 +235,7 @@ body {
     }
 
     &__contact {
-        &--email {
+        &-email {
             font-size: 0.8rem;
 
             @include desktop {
@@ -255,7 +255,7 @@ body {
             max-width: 140vh;
         }
 
-        &--h4 {
+        &-title {
             @include mobile-sub;
 
             &:nth-child(even) {
@@ -282,7 +282,7 @@ body {
             }
         }
 
-        &--par {
+        &-details {
             @include mobile-par;
 
             @include tablet {

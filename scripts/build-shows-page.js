@@ -1,15 +1,7 @@
 async function generateShowsSection() {
     const showsContainer = document.getElementById('showsContainer');
-    //const bandSiteApi = new BandSiteApi(apiKey);
+    // const bandSiteApi = new BandSiteApi(apiKey);
 
-    const showsData = [
-        { date: '2021-09-06', venue: 'Ronald Lane', location: 'San Francisco, CA', link: '#' },
-        { date: '2021-09-21', venue: 'Pier 3 East', location: 'San Francisco, CA', link: '#' },
-        { date: '2021-10-15', venue: 'View Lounge', location: 'San Francisco, CA', link: '#' },
-        { date: '2021-11-06', venue: 'Hyatt Agency', location: 'San Francisco, CA', link: '#' },
-        { date: '2021-11-26', venue: 'Moscow Center', location: 'San Francisco, CA', link: '#' },
-        { date: '2021-12-15', venue: 'Press Club', location: 'San Francisco, CA', link: '#' }
-    ];
     // shows section
     const showsSection = document.createElement('section');
     showsSection.classList.add('shows');
@@ -66,67 +58,18 @@ async function generateShowsSection() {
 
     showsContainerDiv.appendChild(invisibleRowDiv);
 
-    // show articles
-    showsData.forEach(show => {
-        const showArticle = document.createElement('article');
-        showArticle.classList.add('shows__show');
+    try {
+        // Get the list of shows from the API
+        const showsData = await bandSiteApi.getShowsFromApi();
 
-        const eqDiv = document.createElement('div');
-        eqDiv.classList.add('shows__eq');
-
-        // Date
-        const dateH3 = document.createElement('h3');
-        dateH3.classList.add('shows__gone');
-        dateH3.textContent = 'DATE';
-
-        const dateElement = document.createElement('time');
-        dateElement.classList.add('shows__show--date');
-        dateElement.setAttribute('datetime', show.date);
-        dateElement.textContent = new Date(show.date).toDateString();
-
-        // Venue and Location
-        const venloDiv = document.createElement('div');
-        venloDiv.classList.add('shows__eq--venlo');
-
-        const venueH3 = document.createElement('h3');
-        venueH3.classList.add('shows__gone');
-        venueH3.textContent = 'VENUE';
-
-        const venuePar = document.createElement('p');
-        venuePar.classList.add('shows__show--par');
-        venuePar.textContent = show.venue;
-
-        const locationH3 = document.createElement('h3');
-        locationH3.classList.add('shows__gone');
-        locationH3.textContent = 'LOCATION';
-
-        const locationPar = document.createElement('p');
-        locationPar.classList.add('shows__show--par');
-        locationPar.textContent = show.location;
-
-        venloDiv.appendChild(venueH3);
-        venloDiv.appendChild(venuePar);
-        venloDiv.appendChild(locationH3);
-        venloDiv.appendChild(locationPar);
-
-        // Buy Tickets Button
-        const button = document.createElement('button');
-        button.classList.add('shows__show--button');
-        const link = document.createElement('a');
-        link.href = show.link;
-        link.title = 'Only few left! Buy now!';
-        link.textContent = 'BUY TICKETS';
-        button.appendChild(link);
-
-        eqDiv.appendChild(dateH3);
-        eqDiv.appendChild(dateElement);
-        eqDiv.appendChild(venloDiv);
-
-        showArticle.appendChild(eqDiv);
-        showArticle.appendChild(button);
-
-        showsContainerDiv.appendChild(showArticle);
-    });
+        // Loop through the shows and create HTML elements
+        showsData.forEach(show => {
+            const showArticle = createShowArticle(show);
+            showsContainerDiv.appendChild(showArticle);
+        });
+    } catch (error) {
+        console.error('Error getting shows:', error);
+    }
 
     // append elements to the shows section
     showsAllDiv.appendChild(h2);
@@ -139,50 +82,58 @@ async function generateShowsSection() {
 
 generateShowsSection();
 
-// Create an instance of the BandSiteApi class
-const bandSiteApi = new BandSiteApi(apiKey);
-
-// Function to generate the show list
+// function to generate the show list
 async function generateShowList() {
-    const showListContainer = document.getElementById('showListContainer');
+    const showsContainerDiv = document.createElement('div'); // Create a new container for the shows
 
-    try {
-        // Get the list of shows from the API
-        const shows = await bandSiteApi.getShows();
-
-        // Loop through the shows and create HTML elements
-        shows.forEach(show => {
-            const showCard = createShowCard(show);
-            showListContainer.appendChild(showCard);
-        });
-    } catch (error) {
-        console.error('Error getting shows:', error);
-    }
+    // // Replace the existing shows container with the new one
+    // const existingShowsContainer = document.querySelector('.shows__container');
+    // existingShowsContainer.replaceWith(showsContainerDiv);
 }
 
-// Function to create a show card
-function createShowCard(show) {
-    const showCard = document.createElement('div');
-    showCard.classList.add('show-card');
+function createShowArticle(show) {
+    const showArticle = document.createElement('article');
+    showArticle.classList.add('shows__show');
 
-    const dateElement = document.createElement('p');
-    dateElement.classList.add('show-date');
-    dateElement.textContent = new Date(show.date).toLocaleDateString();
+    const eqDiv = document.createElement('div');
+    eqDiv.classList.add('shows__eq');
 
-    const venueElement = document.createElement('p');
-    venueElement.classList.add('show-venue');
-    venueElement.textContent = show.place;
+    // Date
+    const dateElement = document.createElement('time');
+    dateElement.classList.add('shows__show--date');
+    dateElement.setAttribute('datetime', show.date);
+    dateElement.textContent = new Date(show.date).toDateString();
 
-    const locationElement = document.createElement('p');
-    locationElement.classList.add('show-location');
-    locationElement.textContent = show.location;
+    // Venue and Location
+    const venloDiv = document.createElement('div');
+    venloDiv.classList.add('shows__eq--venlo');
 
-    // Append elements to the show card
-    showCard.appendChild(dateElement);
-    showCard.appendChild(venueElement);
-    showCard.appendChild(locationElement);
+    const venuePar = document.createElement('p');
+    venuePar.classList.add('shows__show--par');
+    venuePar.textContent = show.place;
 
-    return showCard;
+    const locationPar = document.createElement('p');
+    locationPar.classList.add('shows__show--par');
+    locationPar.textContent = show.location;
+
+    venloDiv.appendChild(venuePar);
+    venloDiv.appendChild(locationPar);
+
+    // Buy Tickets Button
+    const button = document.createElement('button');
+    button.classList.add('shows__show--button');
+    const link = document.createElement('a');
+    link.title = 'Only few left! Buy now!';
+    link.textContent = 'BUY TICKETS';
+    button.appendChild(link);
+
+    eqDiv.appendChild(dateElement);
+    eqDiv.appendChild(venloDiv);
+
+    showArticle.appendChild(eqDiv);
+    showArticle.appendChild(button);
+
+    return showArticle;
 }
 
 // Invoke the function to generate the show list when the page loads

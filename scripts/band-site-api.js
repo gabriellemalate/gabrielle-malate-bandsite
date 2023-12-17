@@ -6,6 +6,12 @@ class BandSiteApi {
         this.apiUrl = "https://project-1-api.herokuapp.com/";
     }
 
+    async getShowsFromApi() {
+        const response = await axios.get(`${this.apiUrl}showdates)?api_key=${this.apiKey}`);
+        const data = await response.json();
+        return data;
+    }
+
     async postComment(comment) {
         const url = `${this.apiUrl}comments?api_key=${this.apiKey}`;
         const data = { "name": comment.name,

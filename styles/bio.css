@@ -944,15 +944,23 @@ body a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  align-self: center;
-  width: 36.2rem;
+  width: 90%;
   border-bottom: 0.1rem #E1E1E1 solid;
   padding-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .comment__entirely-old {
+    align-self: center;
+    width: 36.2rem;
+    border-bottom: 0.1rem #E1E1E1 solid;
+    padding-bottom: 2rem;
+  }
 }
 .comment__entirely-old img {
   border-radius: 50%;
   width: 12.5%;
   max-width: 5.4vh;
+  align-self: flex-start;
 }
 .comment__entirely-old--text {
   display: flex;

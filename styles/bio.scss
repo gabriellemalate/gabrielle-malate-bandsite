@@ -465,15 +465,22 @@
 
         &-old {
             @include row;
-            align-self: center;
-            width: 36.2rem;
-            border-bottom: .1rem $mercury solid;
+            width: 90%;
+            border-bottom: 0.1rem $mercury solid;
             padding-bottom: 2rem;
+
+            @include tablet {
+                align-self: center;
+                width: 36.2rem;
+                border-bottom: 0.1rem $mercury solid;
+                padding-bottom: 2rem;
+            }
 
             & img {
                 border-radius: 50%;
                 width: 12.5%;
                 max-width: 5.4vh;
+                align-self: flex-start;
             }
 
             &--text {

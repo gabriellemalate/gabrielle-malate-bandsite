@@ -349,6 +349,8 @@
     }
 
     &__old {
+        @include column;
+
         @include tablet {
             margin: 0.8rem 0rem;
         }
@@ -460,6 +462,37 @@
         @include row;
         align-items: flex-start;
         width: 100%;
+
+        &-old {
+            @include row;
+            align-self: center;
+            width: 66%;
+            border-bottom: .1rem $mercury solid;
+            padding-bottom: 2rem;
+
+            & img {
+                border-radius: 50%;
+                width: 12.5%;
+                max-width: 5.4vh;
+            }
+
+            &--text {
+                @include column;
+                width: 100%;
+                align-items: flex-start;
+                padding-left: 1rem;
+
+                & p {
+                    @include mobile-par;
+                    color: $bandsite__black;
+                    margin: 0.2rem 0;
+
+                    @include tablet {
+                        @include body-tab;
+                    }
+                }
+            }
+        }
 
         & img {
             border-radius: 50%;

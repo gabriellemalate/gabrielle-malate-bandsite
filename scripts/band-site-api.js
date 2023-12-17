@@ -48,16 +48,6 @@ class BandSiteApi {
 
 const bandSiteApi = new BandSiteApi(apiKey);
 
-// // post a comment
-// const commentToPost = {
-//     name: nameInput.value,
-//     date: currentDate,
-//     comment: commentInput.value
-// };
-// bandSiteApi.postComment(commentToPost)
-//     .then(postResponse => console.log('Post Comment Response:', postResponse))
-//     .catch(error => console.error('Error posting comment:', error));
-
 // get comments
 bandSiteApi.getComments()
     .then(getCommentsResponse => console.log('Get Comments Response:', getCommentsResponse))

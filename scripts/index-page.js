@@ -11,9 +11,6 @@ async function generateCommentsSection() {
             const oldCommentArticle = createOldCommentArticle(comment);
             commentsContainer.appendChild(oldCommentArticle);
 
-            // hr after each old comment
-            const hrAfterOldComment = document.createElement('hr');
-            commentsContainer.appendChild(hrAfterOldComment);
         });
     } catch (error) {
         console.error('Error getting comments:', error);
@@ -134,14 +131,14 @@ function createOldCommentArticle(comment) {
     oldCommentArticle.classList.add('comment__old');
 
     const oldCommentDiv = document.createElement('div');
-    oldCommentDiv.classList.add('comment__entirely');
+    oldCommentDiv.classList.add('comment__entirely-old');
 
     const img = document.createElement('img');
     img.setAttribute('src', './assets/Images/empty-image.png');
     img.setAttribute('alt', `${comment.name}'s Photo`);
 
     const textDiv = document.createElement('div');
-    textDiv.classList.add('comment__entirely--text');
+    textDiv.classList.add('comment__entirely-old--text');
 
     const topDiv = document.createElement('div');
     topDiv.classList.add('comment__old--top');

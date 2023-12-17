@@ -7,20 +7,32 @@ class BandSiteApi {
     }
 
     async getShowsFromApi() {
-        const response = await axios.get(`${this.apiUrl}showdates)?api_key=${this.apiKey}`);
-        const data = await response.json();
-        return data;
+        try {
+            const response = await axios.get(this.apiUrl + 'showdates', {
+                params: {
+                    api_key: this.apiKey
+                }
+            });
+            const data = response.data;
+            return data;
+        } catch (error) {
+            console.error('Error getting shows:', error);
+            console.error('Request details:', error.config);
+            throw error; // Propagate the error to the caller
+        }
     }
+
 
     async postComment(comment) {
         const url = `${this.apiUrl}comments?api_key=${this.apiKey}`;
-        const data = { "name": comment.name,
-        "comment": comment.comment };
+        const data = {
+            "name": comment.name,
+            "comment": comment.comment
+        };
 
         try {
             const response = await axios.post(url, data);
-            console.log('Post comment response:', response.data);
-        return response.data;
+            return response.data;
         } catch (error) {
             console.error('Error posting comment:', error);
             throw error;
@@ -39,7 +51,7 @@ class BandSiteApi {
         }
     }
 
-        async getShows() {
+    async getShows() {
         const url = `${this.apiUrl}shows/?api_key=${this.apiKey}`;
 
         try {
@@ -54,11 +66,6 @@ class BandSiteApi {
 
 const bandSiteApi = new BandSiteApi(apiKey);
 
-// get comments
-bandSiteApi.getComments()
-    .then(getCommentsResponse => console.log('Get Comments Response:', getCommentsResponse))
-    .catch(error => console.error('Error getting comments:', error));
-
 // posting new comments
 function postComment(form) {
     const nameInput = form.querySelector('.comment__new--name');
@@ -66,7 +73,6 @@ function postComment(form) {
     // current date
     const currentDate = new Date().toLocaleDateString();
 
-    //STUDY THIS 75-82
     // create a new comment object
     const newComment = {
         name: nameInput.value,

@@ -1,6 +1,5 @@
 async function generateShowsSection() {
     const showsContainer = document.getElementById('showsContainer');
-    // const bandSiteApi = new BandSiteApi(apiKey);
 
     // shows section
     const showsSection = document.createElement('section');
@@ -84,11 +83,7 @@ generateShowsSection();
 
 // function to generate the show list
 async function generateShowList() {
-    const showsContainerDiv = document.createElement('div'); // Create a new container for the shows
-
-    // // Replace the existing shows container with the new one
-    // const existingShowsContainer = document.querySelector('.shows__container');
-    // existingShowsContainer.replaceWith(showsContainerDiv);
+    const showsContainerDiv = document.createElement('div'); 
 }
 
 function createShowArticle(show) {
@@ -136,5 +131,5 @@ function createShowArticle(show) {
     return showArticle;
 }
 
-// Invoke the function to generate the show list when the page loads
+// invoke the function to generate the show list when the page loads
 window.addEventListener('DOMContentLoaded', generateShowList);

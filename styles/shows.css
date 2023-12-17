@@ -706,7 +706,7 @@ body a {
     align-items: center;
     justify-content: space-between;
     text-align: start;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 0.1rem solid #E1E1E1;
   }
 }
 .shows__show--date {

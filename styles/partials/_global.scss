@@ -29,7 +29,7 @@ body {
     @include tablet {
         @include row;
         justify-content: center;
-        height: 7.68vh;
+        height: 6.6vh;
     }
     &__smooth {
         @include tablet {

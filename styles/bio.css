@@ -25,7 +25,7 @@ body a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 7.68vh;
+    height: 6.6vh;
   }
 }
 @media (min-width: 768px) {

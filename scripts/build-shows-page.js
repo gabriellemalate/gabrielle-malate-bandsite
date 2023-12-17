@@ -58,10 +58,10 @@ async function generateShowsSection() {
     showsContainerDiv.appendChild(invisibleRowDiv);
 
     try {
-        // Get the list of shows from the API
+        // get the list of shows from the API
         const showsData = await bandSiteApi.getShowsFromApi();
 
-        // Loop through the shows and create HTML elements
+        // loop through the shows and create HTML elements
         showsData.forEach(show => {
             const showArticle = createShowArticle(show);
             showsContainerDiv.appendChild(showArticle);
@@ -83,7 +83,7 @@ generateShowsSection();
 
 // function to generate the show list
 async function generateShowList() {
-    const showsContainerDiv = document.createElement('div'); 
+    const showsContainerDiv = document.createElement('div');
 }
 
 function createShowArticle(show) {
